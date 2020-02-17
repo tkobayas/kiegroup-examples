@@ -1,0 +1,13 @@
+target/
+.settings/
+.classpath
+.project
+*~
+*.tlog
+tmp.log
+.tern-project
+.metadata
+.recommenders/
+bin/
+Drools70Ex000_sandbox/
+
