@@ -17,13 +17,21 @@ public class DroolsTest {
         // Create a `RuleUnitExecutor` class and bind it to the KIE base:
         KieBase kbase = kContainer.getKieBase();
         RuleUnitExecutor executor = RuleUnitExecutor.create().bind(kbase);
-        
-        DataSource<Person> persons = DataSource.create( new Person( "John", 42 ),
-                                                        new Person( "Jane", 44 ),
-                                                        new Person( "Sally", 4 ) );
+
+        DataSource<Person> persons = DataSource.create(new Person("John", 42),
+                                                       new Person("Jane", 44),
+                                                       new Person("Sally", 4));
 
         // Create the `AdultUnit` rule unit using the `persons` data source and run the executor:
         RuleUnit adultUnit = new AdultUnit(persons, 18);
         executor.run(adultUnit);
+
+        // Can re-use
+        //        System.out.println("---");
+        //        persons.insert(new Person( "Paul", 40 ));
+        //        executor.run(adultUnit);
+
+        executor.dispose();
+
     }
 }
