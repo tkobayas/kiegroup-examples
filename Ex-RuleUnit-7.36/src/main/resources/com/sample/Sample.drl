@@ -1,0 +1,14 @@
+package com.sample
+
+unit AdultUnit
+
+
+import com.sample.Person;
+ 
+
+rule Adult
+  when
+    $p : Person(age >= adultAge) from persons
+  then
+    System.out.println($p.getName() + " is adult and greater than " + adultAge);
+end
