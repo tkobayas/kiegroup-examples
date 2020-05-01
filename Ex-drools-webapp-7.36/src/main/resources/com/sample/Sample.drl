@@ -1,0 +1,23 @@
+package com.sample
+
+import java.util.logging.Logger;
+import com.sample.Message;
+
+global Logger logger;
+
+rule "Hello World"
+    when
+        m : Message( status == Message.HELLO, myMessage : message, myUser : user )
+    then
+        System.out.println( kcontext.getKnowledgeRuntime().toString() + " : " + myMessage + ", " + myUser );
+        m.setMessage( "Goodbye cruel " + myUser );
+        m.setStatus( Message.GOODBYE );
+        update( m );
+end
+
+rule "GoodBye"
+    when
+        Message( status == Message.GOODBYE, myMessage : message )
+    then
+        System.out.println( kcontext.getKnowledgeRuntime().toString() + " : " + myMessage );
+end
