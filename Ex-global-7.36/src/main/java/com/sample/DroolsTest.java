@@ -12,20 +12,20 @@ public class DroolsTest {
 
     public static void main(String[] args) {
 
-        System.setProperty("drools.dump.dir", "/home/tkobayas/tmp2");
-        
         KieServices ks = KieServices.Factory.get();
         KieContainer kcontainer = ks.getKieClasspathContainer();
         KieBase kbase = kcontainer.getKieBase();
         KieSession ksession = kbase.newKieSession();
 
-        List<String> result = new ArrayList<>();
-        ksession.setGlobal("result", result);
+        List<String> resultList = new ArrayList<>();
+        ksession.setGlobal("resultList", resultList);
 
         ksession.insert(new Person("John", 35));
+        ksession.insert(new Person("Paul", 32));
+
         ksession.fireAllRules();
 
-        System.out.println("result = " + result);
+        System.out.println("resultList = " + resultList);
 
         ksession.dispose();
 
