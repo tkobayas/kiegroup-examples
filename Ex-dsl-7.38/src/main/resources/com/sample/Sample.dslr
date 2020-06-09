@@ -1,0 +1,10 @@
+package com.sample
+
+import com.sample.Person;
+
+rule Hello
+  when
+    There is a person older than 20
+  then
+    Print name
+end
