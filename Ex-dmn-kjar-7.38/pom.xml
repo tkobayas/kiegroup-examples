@@ -56,6 +56,12 @@
       <version>${drools.version}</version>
     </dependency>
     <dependency>
+      <groupId>org.drools</groupId>
+      <artifactId>drools-model-compiler</artifactId>
+      <version>${drools.version}</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.kie</groupId>
       <artifactId>kie-dmn-api</artifactId>
       <version>${drools.version}</version>
