@@ -1,0 +1,23 @@
+package com.sample
+
+import com.sample.Parameter;
+
+rule HelloEvalJava
+  dialect "java"
+  when
+    $p1 : Parameter()
+    $p2 : Parameter()
+    eval($p1.getList().contains( $p2.getItem() ))
+  then
+    System.out.println("Hello Java, " + $p1);
+end
+
+rule HelloEvalMvel
+  dialect "mvel"
+  when
+    $p1 : Parameter()
+    $p2 : Parameter()
+    eval($p1.list.contains( $p2.item ))
+  then
+    System.out.println("Hello Mvel, " + $p1);
+end
