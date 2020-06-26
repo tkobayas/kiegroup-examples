@@ -6,5 +6,5 @@ rule Hello
   when
     There is a person older than 20
   then
-    Print name
+    Print name with xxx
 end
