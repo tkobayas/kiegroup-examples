@@ -1,0 +1,40 @@
+package com.sample
+ 
+import com.sample.Person;
+import com.sample.LoanApplication;
+
+import java.util.ArrayList;
+
+global java.util.List results;
+
+rule "Dummy"
+    when
+    then
+        System.out.println( "Dummy 4");
+end
+
+
+rule "Hello"
+    when
+        $p : Person( age > 10 )
+    then
+        System.out.println( "Hello, " + $p.getName());
+        results.add("hit Hello rule");
+end
+
+rule CheckAdult 
+when
+    $p: Person( age >= 18 )
+then
+    System.out.println("CheckAdult");
+    modify($p) { setAdult(true) };
+end
+
+rule AdultApplication 
+when
+    $l: LoanApplication( amount <= 5000 )
+    $p: Person( this == $l.applicant, adult == true )
+then
+    System.out.println("AdultApplication");
+    modify($l) { setApproved(true) };
+end

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+  <kbase name="mykbase" default="true" eventProcessingMode="cloud"
+    equalsBehavior="identity">
+    <ksession name="myStatelessKsession" type="stateless" default="true"
+      clockType="realtime" />
+    <ksession name="myStatefulKsession" type="stateful" default="true"
+      clockType="realtime" />
+  </kbase>
+</kmodule>
