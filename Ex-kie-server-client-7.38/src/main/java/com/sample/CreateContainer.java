@@ -19,7 +19,7 @@ public class CreateContainer {
 
     public static void main(String[] args) {
         KieServicesConfiguration config = KieServicesFactory.newRestConfiguration(BASE_URL, "kieserver", "kieserver1!");
-        config.setTimeout(30000);
+        config.setTimeout(1200000);
         KieServicesClient client = KieServicesFactory.newKieServicesClient(config);
 
         ReleaseId releaseId = new ReleaseId(GROUP_ID, ARTIFACT_ID, VERSION);
