@@ -1,0 +1,17 @@
+package com.sample
+ 
+import com.sample.Message;
+
+declare Message
+    @role( event )
+    //@timestamp( messageDate )
+end
+
+
+rule "Is there any close message?"
+    when
+        $m1 : Message( )
+        $m2 : Message( this != $m1 && this after[0, 50d] $m1 )
+    then
+        System.out.println( $m1 + " and " + $m2 + " are close");
+end
