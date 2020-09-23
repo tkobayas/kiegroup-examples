@@ -1,0 +1,15 @@
+package org.mypackage.myunit
+unit AdultUnit2
+
+rule dummy2
+  when
+  then
+    System.out.println("dummy2");
+end
+
+rule Adult2
+  when
+    $p : Person(age >= adultAge) from persons
+  then
+    System.out.println($p.getName() + "!!!");
+end

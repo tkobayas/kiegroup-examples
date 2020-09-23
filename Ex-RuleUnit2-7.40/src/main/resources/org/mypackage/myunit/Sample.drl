@@ -1,0 +1,10 @@
+package org.mypackage.myunit
+unit AdultUnit
+
+rule Adult
+  when
+    $p : Person(age >= adultAge) from persons
+  then
+    System.out.println($p.getName() + " is adult and greater than " + adultAge);
+    drools.run(AdultUnit2.class);
+end
