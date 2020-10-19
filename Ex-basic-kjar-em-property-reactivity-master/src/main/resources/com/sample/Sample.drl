@@ -1,0 +1,18 @@
+package com.sample
+
+import com.sample.Person;
+import static com.sample.MyUtils.myfunc;
+
+
+dialect "mvel"
+
+rule Hello
+  when
+    $p : Person(name == "John", myfunc(name) == 0)
+    //$p : Person(myfunc(name) == 0)
+  then
+    System.out.println("Hello, " + $p.getName());
+    modify ($p) {
+        age = 30;
+    }
+end
