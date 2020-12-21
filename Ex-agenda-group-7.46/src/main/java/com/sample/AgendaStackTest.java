@@ -5,7 +5,7 @@ import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 
-public class DroolsTest {
+public class AgendaStackTest {
 
     public static void main(String[] args) {
 
@@ -17,15 +17,13 @@ public class DroolsTest {
         ksession.insert(new Person("John", 35));
         ksession.insert(new Person("Paul", 33));
 
-        System.out.println("--- calling fireAllRules()");
-        ksession.fireAllRules();
-
-        System.out.println("--- calling setFocus() for agenda1 and fire");
+        System.out.println("--- calling setFocus() for agenda1");
         ksession.getAgenda().getAgendaGroup("agenda1").setFocus();
-        ksession.fireAllRules();
 
-        System.out.println("--- calling setFocus() for agenda2 and fire");
+        System.out.println("--- calling setFocus() for agenda2");
         ksession.getAgenda().getAgendaGroup("agenda2").setFocus();
+
+        System.out.println("--- calling fireAllRules()");
         ksession.fireAllRules();
 
         ksession.dispose();
