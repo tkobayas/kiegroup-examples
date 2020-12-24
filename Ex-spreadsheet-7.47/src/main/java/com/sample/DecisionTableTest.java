@@ -17,9 +17,9 @@ public class DecisionTableTest {
             KieServices ks = KieServices.Factory.get();
 
             // useful for debug
-//            SpreadsheetCompiler compiler = new SpreadsheetCompiler();
-//            String drl = compiler.compile(ks.getResources().newClassPathResource("dtables/Sample.xls").getInputStream(), InputType.XLS);
-//            System.out.println(drl);
+            SpreadsheetCompiler compiler = new SpreadsheetCompiler();
+            String drl = compiler.compile(ks.getResources().newClassPathResource("com/sample/Sample.xls").getInputStream(), InputType.XLS);
+            System.out.println(drl);
 
             KieContainer kContainer = ks.getKieClasspathContainer();
             KieSession kSession = kContainer.newKieSession();
