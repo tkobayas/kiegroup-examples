@@ -1,0 +1,286 @@
+Classfile /home/tkobayas/usr/git/tkobayas/kiegroup-examples/Ex-declared-fact-7.47/generated-sources/com/sample/SomeFactType.class
+  Last modified Dec 25, 2020; size 1853 bytes
+  MD5 checksum ee11b055ce37683a3f93220c75cb225b
+  Compiled from "com.sample.SomeFactType.java"
+public class com.sample.SomeFactType implements java.io.Serializable,org.drools.core.factmodel.GeneratedFact
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Utf8               com/sample/SomeFactType
+   #2 = Class              #1             // com/sample/SomeFactType
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               java/io/Serializable
+   #6 = Class              #5             // java/io/Serializable
+   #7 = Utf8               org/drools/core/factmodel/GeneratedFact
+   #8 = Class              #7             // org/drools/core/factmodel/GeneratedFact
+   #9 = Utf8               com.sample.SomeFactType.java
+  #10 = Utf8               strValue
+  #11 = Utf8               Ljava/lang/String;
+  #12 = Utf8               intValue
+  #13 = Utf8               Ljava/lang/Integer;
+  #14 = Utf8               boolValue
+  #15 = Utf8               Ljava/lang/Boolean;
+  #16 = Utf8               <init>
+  #17 = Utf8               ()V
+  #18 = NameAndType        #16:#17        // "<init>":()V
+  #19 = Methodref          #4.#18         // java/lang/Object."<init>":()V
+  #20 = Integer            0
+  #21 = Utf8               java/lang/Integer
+  #22 = Class              #21            // java/lang/Integer
+  #23 = Utf8               valueOf
+  #24 = Utf8               (I)Ljava/lang/Integer;
+  #25 = NameAndType        #23:#24        // valueOf:(I)Ljava/lang/Integer;
+  #26 = Methodref          #22.#25        // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  #27 = NameAndType        #12:#13        // intValue:Ljava/lang/Integer;
+  #28 = Fieldref           #2.#27         // com/sample/SomeFactType.intValue:Ljava/lang/Integer;
+  #29 = Utf8               java/lang/Boolean
+  #30 = Class              #29            // java/lang/Boolean
+  #31 = Utf8               (Z)Ljava/lang/Boolean;
+  #32 = NameAndType        #23:#31        // valueOf:(Z)Ljava/lang/Boolean;
+  #33 = Methodref          #30.#32        // java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+  #34 = NameAndType        #14:#15        // boolValue:Ljava/lang/Boolean;
+  #35 = Fieldref           #2.#34         // com/sample/SomeFactType.boolValue:Ljava/lang/Boolean;
+  #36 = Utf8               this
+  #37 = Utf8               Lcom/sample/SomeFactType;
+  #38 = Utf8               (Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Boolean;)V
+  #39 = NameAndType        #10:#11        // strValue:Ljava/lang/String;
+  #40 = Fieldref           #2.#39         // com/sample/SomeFactType.strValue:Ljava/lang/String;
+  #41 = Utf8               getStrValue
+  #42 = Utf8               ()Ljava/lang/String;
+  #43 = Utf8               setStrValue
+  #44 = Utf8               (Ljava/lang/String;)V
+  #45 = Utf8               getIntValue
+  #46 = Utf8               ()Ljava/lang/Integer;
+  #47 = Utf8               setIntValue
+  #48 = Utf8               (Ljava/lang/Integer;)V
+  #49 = Utf8               getBoolValue
+  #50 = Utf8               ()Ljava/lang/Boolean;
+  #51 = Utf8               setBoolValue
+  #52 = Utf8               (Ljava/lang/Boolean;)V
+  #53 = Utf8               toString
+  #54 = Utf8               java/lang/StringBuilder
+  #55 = Class              #54            // java/lang/StringBuilder
+  #56 = Methodref          #55.#18        // java/lang/StringBuilder."<init>":()V
+  #57 = Utf8               getClass
+  #58 = Utf8               ()Ljava/lang/Class;
+  #59 = NameAndType        #57:#58        // getClass:()Ljava/lang/Class;
+  #60 = Methodref          #2.#59         // com/sample/SomeFactType.getClass:()Ljava/lang/Class;
+  #61 = Utf8               java/lang/Class
+  #62 = Class              #61            // java/lang/Class
+  #63 = Utf8               getSimpleName
+  #64 = NameAndType        #63:#42        // getSimpleName:()Ljava/lang/String;
+  #65 = Methodref          #62.#64        // java/lang/Class.getSimpleName:()Ljava/lang/String;
+  #66 = Utf8               append
+  #67 = Utf8               (Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #68 = NameAndType        #66:#67        // append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #69 = Methodref          #55.#68        // java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #70 = Utf8               (
+  #71 = String             #70            // (
+  #72 = String             #10            // strValue
+  #73 = Utf8               =
+  #74 = String             #73            // =
+  #75 = Utf8               (Ljava/lang/Object;)Ljava/lang/StringBuilder;
+  #76 = NameAndType        #66:#75        // append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+  #77 = Methodref          #55.#76        // java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+  #78 = Utf8               ,
+  #79 = String             #78            // ,
+  #80 = String             #12            // intValue
+  #81 = String             #14            // boolValue
+  #82 = Utf8                )
+  #83 = String             #82            //  )
+  #84 = NameAndType        #53:#42        // toString:()Ljava/lang/String;
+  #85 = Methodref          #55.#84        // java/lang/StringBuilder.toString:()Ljava/lang/String;
+  #86 = Utf8               buf
+  #87 = Utf8               Ljava/lang/StringBuilder;
+  #88 = Utf8               Signature
+  #89 = Utf8               Code
+  #90 = Utf8               LocalVariableTable
+  #91 = Utf8               SourceFile
+{
+  protected java.lang.String strValue;
+    descriptor: Ljava/lang/String;
+    flags: ACC_PROTECTED
+    Signature: #11                          // Ljava/lang/String;
+
+  protected java.lang.Integer intValue;
+    descriptor: Ljava/lang/Integer;
+    flags: ACC_PROTECTED
+    Signature: #13                          // Ljava/lang/Integer;
+
+  protected java.lang.Boolean boolValue;
+    descriptor: Ljava/lang/Boolean;
+    flags: ACC_PROTECTED
+    Signature: #15                          // Ljava/lang/Boolean;
+
+  public com.sample.SomeFactType();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #19                 // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: ldc           #20                 // int 0
+         7: invokestatic  #26                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        10: putfield      #28                 // Field intValue:Ljava/lang/Integer;
+        13: aload_0
+        14: ldc           #20                 // int 0
+        16: invokestatic  #33                 // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+        19: putfield      #35                 // Field boolValue:Ljava/lang/Boolean;
+        22: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      23     0  this   Lcom/sample/SomeFactType;
+
+  public com.sample.SomeFactType(java.lang.String, java.lang.Integer, java.lang.Boolean);
+    descriptor: (Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Boolean;)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=4, args_size=4
+         0: aload_0
+         1: invokespecial #19                 // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: aload_1
+         6: putfield      #40                 // Field strValue:Ljava/lang/String;
+         9: aload_0
+        10: aload_2
+        11: putfield      #28                 // Field intValue:Ljava/lang/Integer;
+        14: aload_0
+        15: aload_3
+        16: putfield      #35                 // Field boolValue:Ljava/lang/Boolean;
+        19: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      20     0  this   Lcom/sample/SomeFactType;
+            0      20     0 strValue   Ljava/lang/String;
+            0      20     0 intValue   Ljava/lang/Integer;
+            0      20     0 boolValue   Ljava/lang/Boolean;
+
+  public java.lang.String getStrValue();
+    descriptor: ()Ljava/lang/String;
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #40                 // Field strValue:Ljava/lang/String;
+         4: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/sample/SomeFactType;
+
+  public void setStrValue(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: aload_1
+         2: putfield      #40                 // Field strValue:Ljava/lang/String;
+         5: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       6     0  this   Lcom/sample/SomeFactType;
+
+  public java.lang.Integer getIntValue();
+    descriptor: ()Ljava/lang/Integer;
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #28                 // Field intValue:Ljava/lang/Integer;
+         4: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/sample/SomeFactType;
+
+  public void setIntValue(java.lang.Integer);
+    descriptor: (Ljava/lang/Integer;)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: aload_1
+         2: putfield      #28                 // Field intValue:Ljava/lang/Integer;
+         5: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       6     0  this   Lcom/sample/SomeFactType;
+
+  public java.lang.Boolean getBoolValue();
+    descriptor: ()Ljava/lang/Boolean;
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #35                 // Field boolValue:Ljava/lang/Boolean;
+         4: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/sample/SomeFactType;
+
+  public void setBoolValue(java.lang.Boolean);
+    descriptor: (Ljava/lang/Boolean;)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: aload_1
+         2: putfield      #35                 // Field boolValue:Ljava/lang/Boolean;
+         5: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       6     0  this   Lcom/sample/SomeFactType;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: new           #55                 // class java/lang/StringBuilder
+         3: dup
+         4: invokespecial #56                 // Method java/lang/StringBuilder."<init>":()V
+         7: astore_1
+         8: aload_1
+         9: aload_0
+        10: invokevirtual #60                 // Method getClass:()Ljava/lang/Class;
+        13: invokevirtual #65                 // Method java/lang/Class.getSimpleName:()Ljava/lang/String;
+        16: invokevirtual #69                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        19: ldc           #71                 // String (
+        21: invokevirtual #69                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        24: ldc           #72                 // String strValue
+        26: invokevirtual #69                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        29: ldc           #74                 // String =
+        31: invokevirtual #69                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        34: aload_0
+        35: getfield      #40                 // Field strValue:Ljava/lang/String;
+        38: invokevirtual #77                 // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+        41: ldc           #79                 // String ,
+        43: invokevirtual #69                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        46: ldc           #80                 // String intValue
+        48: invokevirtual #69                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        51: ldc           #74                 // String =
+        53: invokevirtual #69                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        56: aload_0
+        57: getfield      #28                 // Field intValue:Ljava/lang/Integer;
+        60: invokevirtual #77                 // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+        63: ldc           #79                 // String ,
+        65: invokevirtual #69                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        68: ldc           #81                 // String boolValue
+        70: invokevirtual #69                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        73: ldc           #74                 // String =
+        75: invokevirtual #69                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        78: aload_0
+        79: getfield      #35                 // Field boolValue:Ljava/lang/Boolean;
+        82: invokevirtual #77                 // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+        85: ldc           #83                 // String  )
+        87: invokevirtual #69                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        90: invokevirtual #85                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        93: areturn
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      94     0  this   Lcom/sample/SomeFactType;
+            0      94     1   buf   Ljava/lang/StringBuilder;
+}
+SourceFile: "com.sample.SomeFactType.java"

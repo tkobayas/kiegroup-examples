@@ -1,0 +1,67 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   com.sample.SomeFactType.java
+
+package com.sample;
+
+import java.io.Serializable;
+import org.drools.core.factmodel.GeneratedFact;
+
+public class SomeFactType
+    implements Serializable, GeneratedFact
+{
+
+    public SomeFactType()
+    {
+        intValue = Integer.valueOf(0);
+        boolValue = Boolean.valueOf(false);
+    }
+
+    public SomeFactType(String s, Integer integer, Boolean boolean1)
+    {
+        this.strValue = s;
+        this.intValue = integer;
+        this.boolValue = boolean1;
+    }
+
+    public String getStrValue()
+    {
+        return strValue;
+    }
+
+    public void setStrValue(String s)
+    {
+        strValue = s;
+    }
+
+    public Integer getIntValue()
+    {
+        return intValue;
+    }
+
+    public void setIntValue(Integer integer)
+    {
+        intValue = integer;
+    }
+
+    public Boolean getBoolValue()
+    {
+        return boolValue;
+    }
+
+    public void setBoolValue(Boolean boolean1)
+    {
+        boolValue = boolean1;
+    }
+
+    public String toString()
+    {
+        StringBuilder buf = new StringBuilder();
+        return buf.append(getClass().getSimpleName()).append("( ").append("strValue").append("=").append(strValue).append(", ").append("intValue").append("=").append(intValue).append(", ").append("boolValue").append("=").append(boolValue).append(" )").toString();
+    }
+
+    protected String strValue;
+    protected Integer intValue;
+    protected Boolean boolValue;
+}

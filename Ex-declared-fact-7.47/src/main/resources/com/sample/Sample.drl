@@ -1,0 +1,21 @@
+package com.sample
+
+
+declare SomeFactType
+  strValue: java.lang.String
+  intValue: java.lang.Integer
+  boolValue: java.lang.Boolean
+end
+
+//declare SomeFactType
+//  strValue: java.lang.String = null
+//  intValue: java.lang.Integer = null
+//  boolValue: java.lang.Boolean = null
+//end
+
+rule Hello
+  when
+    $f : SomeFactType()
+  then
+    System.out.println("Hello, " + $f);
+end
