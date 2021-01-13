@@ -1,0 +1,10 @@
+package com.sample
+
+import com.sample.Person;
+
+rule "HelloWorld_11"
+	when
+		$count : Number() from accumulate (Person(name == "John", $age : age), sum($age))
+	then
+		System.out.println("age sum" + " : " + $count);
+end
