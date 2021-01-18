@@ -1,0 +1,11 @@
+package com.sample
+
+import com.sample.Person;
+
+rule Hello1
+  when
+    $p1 : Person($age := age)
+    $p2 : Person(this != $p1, $age := age)
+  then
+    System.out.println("Hello, " + $p1.getName() + " and " + $p2.getName() + ", $age = " + $age);
+end
