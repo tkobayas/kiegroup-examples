@@ -1,0 +1,8 @@
+package org.example
+
+rule "Hello"
+    when
+        $i : Integer( intValue > 10 )
+    then
+        System.out.println( "Hello, " + $i.intValue());
+end
