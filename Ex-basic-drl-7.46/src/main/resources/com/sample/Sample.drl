@@ -9,10 +9,3 @@ rule Hello1
     System.out.println("Hello, " + $p.getName());
 end
 
-rule Hello2
-  when
-    $p1 : Person()
-    $p2 : Person(age > $p1.age)
-  then
-    System.out.println($p2.getName() + " is older");
-end

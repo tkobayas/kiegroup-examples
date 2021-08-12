@@ -9,6 +9,8 @@ public class DroolsTest {
 
     public static void main(String[] args) {
 
+        System.setProperty("drools.dump.dir", "/home/tkobayas/tmp");
+        
         KieServices ks = KieServices.Factory.get();
         KieContainer kcontainer = ks.getKieClasspathContainer();
         KieBase kbase = kcontainer.getKieBase();
