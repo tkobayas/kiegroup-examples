@@ -46,7 +46,7 @@
   <dependencies>
     <dependency>
       <groupId>org.drools</groupId>
-      <artifactId>drools-engine-classic</artifactId>
+      <artifactId>drools-engine</artifactId>
       <version>${drools.version}</version>
     </dependency>
     <dependency>
