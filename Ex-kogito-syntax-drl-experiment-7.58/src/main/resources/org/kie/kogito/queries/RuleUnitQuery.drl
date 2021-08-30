@@ -1,0 +1,45 @@
+package org.kie.kogito.queries;
+
+import org.kie.kogito.queries.LoanApplication;
+
+global Integer maxAmount;
+
+rule SmallDepositApprove when
+    $l: LoanApplication( applicant.age >= 20, deposit < 1000, amount <= 2000 )
+then
+    modify($l) { setApproved(true) };
+end
+
+rule SmallDepositReject when
+    $l: LoanApplication( applicant.age >= 20, deposit < 1000, amount > 2000 )
+then
+    modify($l) { setApproved(false) };
+end
+
+rule LargeDepositApprove when
+    $l: LoanApplication( applicant.age >= 20, deposit >= 1000, amount <= maxAmount )
+then
+    modify($l) { setApproved(true) };
+end
+
+rule LargeDepositReject when
+    $l: LoanApplication( applicant.age >= 20, deposit >= 1000, amount > maxAmount )
+then
+    modify($l) { setApproved(false) };
+end
+
+rule NotAdultApplication when
+    $l: LoanApplication( applicant.age < 20 )
+then
+    modify($l) { setApproved(false) };
+end
+
+
+query FindApproved
+    $l: LoanApplication( approved )
+end
+
+query FindNotApprovedIdAndAmount
+    LoanApplication( !approved, $id: id, $amount : amount )
+end
+
