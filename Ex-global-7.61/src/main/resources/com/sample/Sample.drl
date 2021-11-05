@@ -1,0 +1,12 @@
+package com.sample
+
+import com.sample.Person;
+
+global java.util.List resultList;
+
+rule Hello
+  when
+    $p : Person(age > 20)
+  then
+    resultList.add("Hello " + $p.getName());
+end
