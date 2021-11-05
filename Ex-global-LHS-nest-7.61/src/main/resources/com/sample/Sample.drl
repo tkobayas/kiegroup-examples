@@ -1,0 +1,28 @@
+package com.sample
+
+import com.sample.Person;
+
+global com.sample.MyGlobal $g;
+
+// These rules don't make use of hash index
+
+rule Hello1
+  when
+    $p : Person(age == $g.ageA)
+  then
+    System.out.println("Hello1, " + $p.getName());
+end
+
+rule Hello2
+  when
+    $p : Person(age == $g.ageB)
+  then
+    System.out.println("Hello2, " + $p.getName());
+end
+
+rule Hello3
+  when
+    $p : Person(age == $g.ageC)
+  then
+    System.out.println("Hello3, " + $p.getName());
+end
