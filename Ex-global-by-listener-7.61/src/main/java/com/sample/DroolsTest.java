@@ -31,6 +31,9 @@ public class DroolsTest {
         ksession.fireAllRules();
 
 //        System.out.println("resultList = " + resultList);
+        
+        Object resultList = ksession.getGlobal("resultList");
+        System.out.println("resultList = " + resultList);
 
         ksession.dispose();
 
