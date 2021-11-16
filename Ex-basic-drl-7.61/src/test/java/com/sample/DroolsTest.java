@@ -9,16 +9,19 @@ import org.kie.api.runtime.KieSession;
 public class DroolsTest {
 
     @Test
-    public void testKjar() {
+    public void testRules() {
         KieServices ks = KieServices.Factory.get();
         KieContainer kcontainer = ks.getKieClasspathContainer();
         KieBase kbase = kcontainer.getKieBase();
         KieSession ksession = kbase.newKieSession();
 
-        ksession.insert(new Person("John", 35));
-        ksession.insert(new Person("Paul", 18));
+        try {
+            ksession.insert(new Person("John", 35));
+            ksession.insert(new Person("Paul", 18));
 
-        ksession.fireAllRules();
-        ksession.dispose();
+            ksession.fireAllRules();
+        } finally {
+            ksession.dispose();
+        }
     }
 }

@@ -15,10 +15,12 @@ public class DroolsTest {
         KieContainer kContainer = ks.newKieContainer(releaseId);
         KieSession kSession = kContainer.newKieSession();
 
-        Person john = new Person("john", 25);
-        kSession.insert(john);
-        kSession.fireAllRules();
-
-        kSession.dispose();
+        try {
+            Person john = new Person("john", 25);
+            kSession.insert(john);
+            kSession.fireAllRules();
+        } finally {
+            kSession.dispose();
+        }
     }
 }
