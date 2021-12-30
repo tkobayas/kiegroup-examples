@@ -1,0 +1,11 @@
+package com.myspace.myproj;
+
+import java.lang.Number;
+
+rule "gr1"
+	dialect "mvel"
+	when
+		$p : Person( )
+	then
+		System.out.println("guided rule : " + $p.getName());
+end

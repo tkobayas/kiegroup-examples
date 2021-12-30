@@ -1,0 +1,8 @@
+package com.myspace.myproj;
+
+rule "hello"
+when
+  $p : Person()
+then
+  System.out.println("hello , " + $p.getName());
+end
