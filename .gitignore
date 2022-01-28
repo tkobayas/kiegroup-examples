@@ -10,4 +10,5 @@ tmp.log
 .recommenders/
 bin/
 Drools70Ex000_sandbox/
+build.metadata
 
