@@ -15,7 +15,7 @@ public class DroolsTest {
     @Test
     public void testKjar() {
         KieServices ks = KieServices.Factory.get();
-        ReleaseId releaseId = ks.newReleaseId("com.sample", "basic-kjar-em", "1.0.0");
+        ReleaseId releaseId = ks.newReleaseId("com.sample", "basic-kjar-em-64", "1.0.0");
 
         long startKContainer = System.currentTimeMillis();
         KieContainer kContainer = ks.newKieContainer(releaseId);

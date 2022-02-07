@@ -35,7 +35,7 @@
     <!-- dependency to the kjar -->
     <dependency>
       <groupId>com.sample</groupId>
-      <artifactId>basic-kjar-em</artifactId>
+      <artifactId>basic-kjar-em-64</artifactId>
       <version>1.0.0</version>
     </dependency>
 
