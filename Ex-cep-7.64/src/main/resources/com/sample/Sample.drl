@@ -9,7 +9,7 @@ import java.util.Date;
 
 declare Message
     @role( event )
-    //@timestamp( messageDate )
+    @expires(1000d)
 end
 
 

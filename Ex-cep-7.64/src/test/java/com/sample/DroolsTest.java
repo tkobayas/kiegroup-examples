@@ -1,13 +1,20 @@
 package com.sample;
 
 import java.text.SimpleDateFormat;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
+import org.drools.core.common.EventFactHandle;
 import org.drools.core.time.impl.PseudoClockScheduler;
 import org.junit.Test;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
+import org.kie.api.runtime.rule.FactHandle;
 import org.kie.api.time.SessionClock;
 
 public class DroolsTest {
@@ -45,6 +52,22 @@ public class DroolsTest {
             kSession.insert(message5);
 
             kSession.fireAllRules();
+
+            // The kSession.getObjects() and kSession.getFactHandles() return a Collection, not sorted
+            System.out.println();
+            System.out.println("------ not sorted");
+            Collection<FactHandle> factHandles = kSession.getFactHandles();
+            for (FactHandle factHandle : factHandles) {
+                EventFactHandle eventFactHandle = (EventFactHandle) factHandle;
+                System.out.println(new Date(eventFactHandle.getStartTimestamp()) + " -> " + eventFactHandle.getObject());
+            }
+
+            System.out.println();
+            System.out.println("------ sorted");
+            List<EventFactHandle> sortedFactHandles = factHandles.stream().map(EventFactHandle.class::cast).sorted(Comparator.comparingLong(EventFactHandle::getStartTimestamp)).collect(Collectors.toList());
+            for (EventFactHandle eventFactHandle : sortedFactHandles) {
+                System.out.println(new Date(eventFactHandle.getStartTimestamp()) + " -> " + eventFactHandle.getObject());
+            }
 
         } catch (Throwable t) {
             t.printStackTrace();
