@@ -2,6 +2,9 @@ package com.sample;
 
 public class Constants {
 
+    public static final String USERNAME = "kieserver";
+    public static final String PASSWORD = "kieserver1!";
+
     public static final String BASE_URL = "http://localhost:8080/kie-server/services/rest/server";
 
     public static final String GROUP_ID = "com.sample";

@@ -1,8 +1,5 @@
 package com.sample;
 
-import static com.sample.Constants.BASE_URL;
-import static com.sample.Constants.CONTAINER_ID;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -20,10 +17,12 @@ import org.kie.server.client.KieServicesConfiguration;
 import org.kie.server.client.KieServicesFactory;
 import org.kie.server.client.RuleServicesClient;
 
-public class StatefulTest extends TestCase {
+import static com.sample.Constants.BASE_URL;
+import static com.sample.Constants.CONTAINER_ID;
+import static com.sample.Constants.PASSWORD;
+import static com.sample.Constants.USERNAME;
 
-    private static final String USERNAME = "kieserver";
-    private static final String PASSWORD = "kieserver1!";
+public class StatefulTest extends TestCase {
 
     private static final String KSESSION_NAME = "myStatefulKsession";
 
