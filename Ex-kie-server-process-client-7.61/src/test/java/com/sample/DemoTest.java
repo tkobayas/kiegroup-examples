@@ -24,8 +24,6 @@ public class DemoTest extends TestCase {
 
     public void testRest() throws Exception {
 
-        // Just for demo purpose. Should start from a clean database because this uses fixed Ids
-
         KieServicesConfiguration config = KieServicesFactory.newRestConfiguration(BASE_URL, USERNAME, PASSWORD);
         List<String> capabilities = new ArrayList<String>();
         capabilities.add(KieServerConstants.CAPABILITY_BPM);
@@ -44,10 +42,6 @@ public class DemoTest extends TestCase {
         System.out.println("startProcess() : processInstanceId = " + processInstanceId);
 
         UserTaskServicesClient userTaskServiceClient = client.getServicesClient(UserTaskServicesClient.class);
-
-        //        List<String> statusList = List.of("Reserved");
-        //        List<TaskSummary> taskList = userTaskServiceClient.findTasksByStatusByProcessInstanceId(processInstanceId, statusList, 0, 100);
-        //        System.out.println(taskList);
 
         List<TaskSummary> taskList = userTaskServiceClient.findTasksAssignedAsPotentialOwner(USERNAME, 0, 100);
         for (TaskSummary taskSummary : taskList) {

@@ -24,8 +24,6 @@ public class DemoTest2 extends TestCase {
 
     public void testRest() throws Exception {
 
-        // Just for demo purpose. Should start from a clean database because this uses fixed Ids
-
         KieServicesConfiguration config = KieServicesFactory.newRestConfiguration(BASE_URL, USERNAME, PASSWORD);
         List<String> capabilities = new ArrayList<String>();
         capabilities.add(KieServerConstants.CAPABILITY_BPM);
