@@ -37,8 +37,8 @@ public class StatelessTest extends TestCase {
         config.addExtraClasses(classes);
         config.setMarshallingFormat(MarshallingFormat.JSON);
 
-        KieServicesClient client = KieServicesFactory.newKieServicesClient(config);
-        RuleServicesClient ruleClient = client.getServicesClient(RuleServicesClient.class);
+        KieServicesClient kieServicesClient = KieServicesFactory.newKieServicesClient(config);
+        RuleServicesClient ruleServicesClient = kieServicesClient.getServicesClient(RuleServicesClient.class);
 
         List<Command<?>> commands = new ArrayList<Command<?>>();
         KieCommands commandsFactory = KieServices.Factory.get().getCommands();
@@ -52,7 +52,7 @@ public class StatelessTest extends TestCase {
 
         BatchExecutionCommand batchExecution = commandsFactory.newBatchExecution(commands, KSESSION_NAME);
 
-        ServiceResponse<ExecutionResults> response = ruleClient.executeCommandsWithResults(CONTAINER_ID, batchExecution);
+        ServiceResponse<ExecutionResults> response = ruleServicesClient.executeCommandsWithResults(CONTAINER_ID, batchExecution);
 
         System.out.println("-----------------------------------");
         System.out.println(response);
