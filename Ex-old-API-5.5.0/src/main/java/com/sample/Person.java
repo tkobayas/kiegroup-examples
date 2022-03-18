@@ -1,15 +1,13 @@
 package com.sample;
 
-import org.kie.api.remote.Remotable;
-
-@Remotable
 public class Person {
 
     private String name;
 
     private int age;
 
-    public Person() {}
+    public Person() {
+    }
 
     public Person(String name, int age) {
         this.name = name;
@@ -31,4 +29,5 @@ public class Person {
     public void setName(String name) {
         this.name = name;
     }
+
 }
