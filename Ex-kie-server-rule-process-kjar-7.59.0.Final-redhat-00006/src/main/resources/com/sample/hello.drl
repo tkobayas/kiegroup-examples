@@ -1,0 +1,7 @@
+rule hello
+  ruleflow-group "group1"
+  when
+    $s : String()
+  then
+    System.out.println("hello, " + $s);
+end
