@@ -6,7 +6,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.sample</groupId>
-  <artifactId>basic-kjar-runner</artifactId>
+  <artifactId>basic-kjar-runner-em</artifactId>
   <version>1.0.0</version>
 
   <properties>
@@ -35,7 +35,7 @@
     <!-- dependency to the kjar -->
     <dependency>
       <groupId>com.sample</groupId>
-      <artifactId>basic-kjar</artifactId>
+      <artifactId>basic-kjar-em</artifactId>
       <version>1.0.0</version>
     </dependency>
 
