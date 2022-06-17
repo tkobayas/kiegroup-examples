@@ -10,7 +10,7 @@
     <packaging>war</packaging>
 
     <properties>
-        <drools.version>7.36.0.Final</drools.version>
+        <drools.version>7.59.0.Final-redhat-00006</drools.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <version.wildfly.maven.plugin>1.0.2.Final</version.wildfly.maven.plugin>
         <version.jboss.bom.eap>7.1.0.GA</version.jboss.bom.eap>
