@@ -12,7 +12,7 @@
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <drools.version>7.33.0.Final-redhat-00002</drools.version>
+    <drools.version>7.59.0.Final-redhat-00006</drools.version>
   </properties>
 
   <repositories>
