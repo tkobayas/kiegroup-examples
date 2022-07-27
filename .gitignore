@@ -11,4 +11,5 @@ tmp.log
 bin/
 Drools70Ex000_sandbox/
 build.metadata
+ksession.out
 
