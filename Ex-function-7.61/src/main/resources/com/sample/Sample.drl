@@ -1,0 +1,15 @@
+package com.sample
+
+import com.sample.Person;
+
+function boolean isOdd(int number) {
+  return (number % 2) == 1;
+}
+
+rule Hello1
+  when
+    $p : Person(isOdd(age))
+  then
+    System.out.println("Hello, " + $p.getName());
+end
+

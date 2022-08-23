@@ -1,0 +1,13 @@
+package com.sample
+
+import com.sample.Person;
+import static com.sample.MyUtils.isOdd;
+
+
+rule Hello1
+  when
+    $p : Person($age : age, isOdd($age))
+  then
+    System.out.println("Hello, " + $p.getName());
+end
+
