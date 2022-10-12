@@ -1,0 +1,10 @@
+package com.company;
+
+import com.company.model.Model;
+
+rule Hello
+  when
+    $m : Model()
+  then
+    System.out.println("Hello, " + $m.getValue());
+end
