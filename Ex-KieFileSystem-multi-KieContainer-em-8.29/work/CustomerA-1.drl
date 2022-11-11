@@ -1,0 +1,10 @@
+package com.sample
+ 
+import com.sample.Person;
+ 
+rule "CustomerA 1"
+    when
+        Person( )
+    then
+        System.out.println( "CustomerA 1 : fired" );
+end

@@ -1,0 +1,11 @@
+package com.sample
+ 
+import com.sample.Person;
+ 
+rule "Common Rule 1"
+    salience 1000
+    when
+        Person( )
+    then
+        System.out.println( "Common Rule 1 : fired" );
+end
