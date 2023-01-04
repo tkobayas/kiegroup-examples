@@ -1,0 +1,11 @@
+package com.sample
+ 
+import com.sample.Person;
+
+rule "Hello World 2"
+    when
+        $p : Person( )
+    then
+        System.out.println( "Hello World 2, " + $p.getName());
+end
+
