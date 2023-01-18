@@ -1,0 +1,18 @@
+package com.sample
+ 
+import com.sample.Message;
+
+declare Message
+    @role( event )
+    //@expires(300d)
+end
+
+
+rule "window length"
+    when
+        $m : Message( ) over window:length(3)
+        //$m : Message( ) over window:time(300d)
+    then
+        System.out.println( "$m = " + $m);
+end
+
