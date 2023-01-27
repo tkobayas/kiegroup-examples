@@ -1,0 +1,20 @@
+package org.example;
+unit ExampleUnit;
+
+rule Test
+when
+    $variable: /variables
+then
+    strings.add($variable.getId());
+end
+
+query GetStrings
+     $result: /strings
+end
+
+rule Print
+when
+    $s : /strings
+then
+    System.out.println($s);
+end
