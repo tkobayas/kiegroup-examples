@@ -1,0 +1,17 @@
+package com.sample
+ 
+import com.sample.Person;
+ 
+rule "Hello World 1_A"
+    when
+        $p : Person( )
+    then
+        System.out.println( "Hello World 1_A, " + $p.getName());
+end
+
+rule "Hello World 1_B"
+    when
+        $p : Person( )
+    then
+        System.out.println( "Hello World 1_B, " + $p.getName());
+end
