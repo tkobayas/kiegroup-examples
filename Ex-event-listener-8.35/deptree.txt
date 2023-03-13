@@ -1,0 +1,52 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.sample:basic-example >----------------------
+[INFO] Building basic-example 1.0.0-SNAPSHOT
+[INFO] --------------------------------[ kjar ]--------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ basic-example ---
+[INFO] com.sample:basic-example:kjar:1.0.0-SNAPSHOT
+[INFO] +- org.drools:drools-engine:jar:8.29.0.Final:compile
+[INFO] |  +- org.kie:kie-api:jar:8.29.0.Final:compile
+[INFO] |  +- org.kie:kie-internal:jar:8.29.0.Final:compile
+[INFO] |  +- org.drools:drools-core:jar:8.29.0.Final:compile
+[INFO] |  |  +- org.drools:drools-wiring-static:jar:8.29.0.Final:compile
+[INFO] |  |  \- org.drools:drools-io:jar:8.29.0.Final:compile
+[INFO] |  |     \- org.drools:drools-util:jar:8.29.0.Final:compile
+[INFO] |  +- org.drools:drools-wiring-dynamic:jar:8.29.0.Final:compile
+[INFO] |  +- org.drools:drools-kiesession:jar:8.29.0.Final:compile
+[INFO] |  +- org.drools:drools-tms:jar:8.29.0.Final:compile
+[INFO] |  +- org.drools:drools-compiler:jar:8.29.0.Final:compile
+[INFO] |  |  +- org.drools:drools-drl-parser:jar:8.29.0.Final:compile
+[INFO] |  |  +- org.drools:drools-drl-extensions:jar:8.29.0.Final:compile
+[INFO] |  |  +- org.drools:drools-drl-ast:jar:8.29.0.Final:compile
+[INFO] |  |  +- org.kie:kie-memory-compiler:jar:8.29.0.Final:compile
+[INFO] |  |  +- org.drools:drools-ecj:jar:8.29.0.Final:compile
+[INFO] |  |  \- org.antlr:antlr-runtime:jar:3.5.2:compile
+[INFO] |  \- org.drools:drools-model-codegen:jar:8.29.0.Final:compile
+[INFO] |     +- org.drools:drools-codegen-common:jar:8.29.0.Final:compile
+[INFO] |     +- com.github.javaparser:javaparser-core:jar:3.24.2:compile
+[INFO] |     +- org.drools:drools-mvel-parser:jar:8.29.0.Final:compile
+[INFO] |     \- org.drools:drools-mvel-compiler:jar:8.29.0.Final:compile
+[INFO] +- org.drools:drools-model-compiler:jar:8.29.0.Final:compile
+[INFO] |  +- org.kie:kie-util-maven-support:jar:8.29.0.Final:compile
+[INFO] |  +- org.drools:drools-canonical-model:jar:8.29.0.Final:compile
+[INFO] |  +- org.drools:drools-wiring-api:jar:8.29.0.Final:compile
+[INFO] |  \- org.slf4j:slf4j-api:jar:1.7.30:compile
+[INFO] +- org.drools:drools-xml-support:jar:8.29.0.Final:compile
+[INFO] |  +- com.thoughtworks.xstream:xstream:jar:1.4.19:compile
+[INFO] |  |  \- io.github.x-stream:mxparser:jar:1.2.2:compile
+[INFO] |  |     \- xmlpull:xmlpull:jar:1.1.3.1:compile
+[INFO] |  +- org.kie:kie-util-xml:jar:8.29.0.Final:compile
+[INFO] |  +- org.drools:drools-commands:jar:8.29.0.Final:compile
+[INFO] |  \- commons-codec:commons-codec:jar:1.15:compile
+[INFO] +- ch.qos.logback:logback-classic:jar:1.2.3:compile
+[INFO] |  \- ch.qos.logback:logback-core:jar:1.2.3:compile
+[INFO] \- junit:junit:jar:4.13.1:test
+[INFO]    \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.171 s
+[INFO] Finished at: 2022-10-25T13:03:53+09:00
+[INFO] ------------------------------------------------------------------------
