@@ -1,9 +1,11 @@
 package com.sample;
 
+import org.drools.model.codegen.ExecutableModelProject;
+import org.junit.Test;
+
 import java.io.File;
 import java.io.FileInputStream;
 
-import org.junit.Test;
 import org.kie.api.KieBase;
 import org.kie.api.KieServices;
 import org.kie.api.builder.KieFileSystem;
@@ -34,7 +36,7 @@ public class DroolsTest {
         kfs.generateAndWritePomXML(releaseId);
 
         // Now resources are built and stored into an internal repository
-        ks.newKieBuilder(kfs).buildAll();
+        ks.newKieBuilder(kfs).buildAll(ExecutableModelProject.class);
 
         // You can get a KieContainer with the ReleaseId
         KieContainer kcontainer = ks.newKieContainer(releaseId);

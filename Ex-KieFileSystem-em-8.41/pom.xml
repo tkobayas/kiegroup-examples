@@ -6,7 +6,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.sample</groupId>
-  <artifactId>Ex-KieFileSystem-8.41.0.Final</artifactId>
+  <artifactId>Ex-KieFileSystem-em-8.41.0.Final</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 
   <properties>
@@ -34,7 +34,7 @@
   <dependencies>
     <dependency>
       <groupId>org.drools</groupId>
-      <artifactId>drools-engine-classic</artifactId>
+      <artifactId>drools-engine</artifactId>
       <version>${drools.version}</version>
     </dependency>
 
