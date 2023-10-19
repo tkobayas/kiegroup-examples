@@ -1,0 +1,31 @@
+package com.sample;
+
+import com.sample.Event;
+
+
+rule "Close event without status change x "
+when
+    $eventCreated: Event($eventId: eventId, status=="created")
+    not(
+        Event(
+            this != $eventCreated,
+            eventId==$eventId,
+            status != "created",
+            status != "closed",
+            this after[0s, 1m] $eventCreated
+        )
+    )
+then
+    System.out.println("No status change in 1 secs");
+
+    insert(new Event($eventCreated.getEventId(), "closed", "auto-closed"));
+end
+
+rule "Collect closed event"
+when
+    $eventClosed: Event(status=="closed")
+then
+    System.out.println("Sending " + $eventClosed + " to notification channel");
+    channels['notification-channel'].send($eventClosed);
+
+end
