@@ -1,0 +1,11 @@
+package com.sample
+ 
+import com.sample.Person;
+ 
+rule "Hello"
+    when
+        $p : Person( age > 20 )
+    then
+        System.out.println( "Hello XX, " + $p.getName());
+end
+
