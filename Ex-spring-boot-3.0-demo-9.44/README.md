@@ -18,3 +18,8 @@ In a new terminal,
 ```shell
 curl http://localhost:8080/hello
 ```
+### Notes
+
+If you use Spring Boot 3.2+, you will hit the issue: https://github.com/apache/incubator-kie-drools/issues/5745
+
+Please wait for a fix.
