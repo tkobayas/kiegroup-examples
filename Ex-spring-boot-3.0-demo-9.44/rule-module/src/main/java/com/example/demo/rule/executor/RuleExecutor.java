@@ -1,5 +1,9 @@
 package com.example.demo.rule.executor;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.example.demo.rule.domain.Person;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
@@ -16,8 +20,11 @@ public class RuleExecutor {
 		return kieContainer.newKieSession();
 	}
 
-	public void executeRule(KieSession kieSession) {
-		kieSession.insert("John");
+	public List<String> executeRule(KieSession kieSession, Person person) {
+		List<String> results = new ArrayList<>();
+		kieSession.setGlobal("results", results);
+		kieSession.insert(person);
 		kieSession.fireAllRules();
+		return results;
 	}
 }

@@ -1,5 +1,8 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
+import com.example.demo.rule.domain.Person;
 import com.example.demo.rule.facade.RuleFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,9 +23,10 @@ public class SimpleController {
 	@GetMapping("/hello")
 	private String hello() {
 		logger.info("Before rule");
-		ruleFacade.executeRule();
+		Person person = new Person("John", 25); // An example object. You may create a Person object from a request.
+		List<String> results = ruleFacade.executeRule(person);
 		logger.info("After rule");
 
-		return "hello!";
+		return results.toString();
 	}
 }

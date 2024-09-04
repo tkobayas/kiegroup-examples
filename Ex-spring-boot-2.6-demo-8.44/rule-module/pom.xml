@@ -10,6 +10,7 @@
   <name>rule-module</name>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>11</java.version>
     <drools.version>8.44.0.Final</drools.version>
     <spring-boot.version>2.6.6</spring-boot.version>
@@ -21,9 +22,19 @@
       <version>${spring-boot.version}</version>
     </dependency>
 
+    <!--    <dependency>-->
+    <!--      <groupId>org.drools</groupId>-->
+    <!--      <artifactId>drools-engine-classic</artifactId>-->
+    <!--      <version>${drools.version}</version>-->
+    <!--    </dependency>-->
     <dependency>
       <groupId>org.drools</groupId>
-      <artifactId>drools-engine-classic</artifactId>
+      <artifactId>drools-engine</artifactId>
+      <version>${drools.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.drools</groupId>
+      <artifactId>drools-xml-support</artifactId>
       <version>${drools.version}</version>
     </dependency>
   </dependencies>
@@ -35,6 +46,19 @@
         <artifactId>kie-maven-plugin</artifactId>
         <version>${drools.version}</version>
         <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <basedir/>
+          <buildDirectory/>
+          <outputDirectory/>
+          <projectArtifact/>
+          <source>11</source>
+          <target>11</target>
+        </configuration>
       </plugin>
     </plugins>
   </build>

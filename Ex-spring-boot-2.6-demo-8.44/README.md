@@ -10,8 +10,7 @@
 
 ```shell
 mvn clean install
-cd demo
-java -jar target/demo-0.0.1-SNAPSHOT.jar
+java -jar demo/target/demo-0.0.1-SNAPSHOT.jar
 ```
 
 In a new terminal,

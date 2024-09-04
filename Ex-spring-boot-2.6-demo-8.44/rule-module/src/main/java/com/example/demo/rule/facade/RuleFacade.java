@@ -1,5 +1,8 @@
 package com.example.demo.rule.facade;
 
+import java.util.List;
+
+import com.example.demo.rule.domain.Person;
 import org.kie.api.runtime.KieSession;
 import org.springframework.stereotype.Component;
 
@@ -13,10 +16,10 @@ public class RuleFacade {
 		this.re = re;
 	}
 
-	public void executeRule() {
+	public List<String> executeRule(Person person) {
 		KieSession ks = re.initializeRules();
 		try {
-			re.executeRule(ks);
+			return re.executeRule(ks, person);
 		} finally {
 			ks.dispose();
 		}

@@ -1,8 +1,13 @@
 package com.example.demo.rule;
 
+import com.example.demo.rule.domain.Person;
+
+global java.util.List results;
+
 rule "Hello World"
     when
-        $s : String()
+        $p : Person()
     then
-        System.out.println("Hello, " + $s);
+        results.add("Hello, " + $p.getName());
+        System.out.println("Rule fired: " + results);
 end
