@@ -1,0 +1,35 @@
+package com.sample
+ 
+import com.sample.Person;
+ 
+rule R1
+	ruleflow-group "group1"
+    when
+        p : Person()
+    then
+        System.out.println( "group1 : R1" );
+end
+
+rule R2
+	ruleflow-group "group2"
+    when
+        p : Person()
+    then
+        System.out.println( "group2 : R2" );
+end
+
+rule R3
+	ruleflow-group "group3"
+    when
+        p : Person()
+    then
+        System.out.println( "group3 : R3" );
+end
+
+rule R4
+	ruleflow-group "group4"
+    when
+        p : Person()
+    then
+        System.out.println( "group4 : R4" );
+end

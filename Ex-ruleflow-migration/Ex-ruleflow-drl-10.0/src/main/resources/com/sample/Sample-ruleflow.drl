@@ -1,0 +1,38 @@
+package com.sample
+ 
+import com.sample.Person;
+import static com.sample.Utils.activateRuleFlowGroup;
+ 
+rule group1_to_group2
+	ruleflow-group "group1"
+	salience -100
+    when
+        Person(age > 18)
+    then
+        activateRuleFlowGroup("group2", kcontext);
+end
+
+rule group1_to_group3
+	ruleflow-group "group1"
+	salience -100
+    when
+        p : Person(age <= 18)
+    then
+        activateRuleFlowGroup("group3", kcontext);
+end
+
+rule group2_to_group4
+	ruleflow-group "group2"
+	salience -100
+    when
+    then
+        activateRuleFlowGroup("group4", kcontext);
+end
+
+rule group3_to_group4
+	ruleflow-group "group3"
+	salience -100
+    when
+    then
+        activateRuleFlowGroup("group4", kcontext);
+end
