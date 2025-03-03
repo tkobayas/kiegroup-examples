@@ -2,10 +2,10 @@ package com.sample
  
 import com.sample.Person;
  
-rule "Hello World 1"
+rule "Hello"
     when
-        Person( )
+        $p : Person( age > 20 )
     then
-        System.out.println( "Hello World 1" );
+        System.out.println( "Hello basic-kjar-em:10.0.0, " + $p.getName());
 end
 
