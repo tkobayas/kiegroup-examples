@@ -1,3 +1,5 @@
+## NOTE: This usage is not supported. Just for testing purposes.
+
 ## Drools 10.0.0 + rule flow bpmn + kjar
 
 ```shell
