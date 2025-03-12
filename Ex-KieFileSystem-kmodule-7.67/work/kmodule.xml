@@ -1,0 +1,5 @@
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+  <kbase name="sss" default="true" eventProcessingMode="stream" equalsBehavior="identity">
+    <ksession name="stateless" type="stateless" default="true" clockType="realtime"/>
+  </kbase>
+</kmodule>
