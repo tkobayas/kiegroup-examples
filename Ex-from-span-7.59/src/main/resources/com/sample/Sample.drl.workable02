@@ -1,0 +1,16 @@
+package com.sample
+
+import com.sample.InputData;
+import com.sample.Span;
+import java.util.List;
+
+
+rule checkSpan
+  when
+    $i : InputData()
+    $s : Span() from $i.spanList
+    not (Span(startDate < $s.endDate, endDate > $s.endDate) from $i.spanList)
+    not (Span(startDate < $s.startDate, endDate > $s.startDate) from $i.spanList)
+  then
+    System.out.println("not overlapped : $s = " + $s);
+end

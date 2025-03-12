@@ -1,0 +1,24 @@
+package com.sample
+
+import com.sample.InputData;
+import com.sample.Span;
+import java.util.List;
+
+
+rule findOverlap1
+  when
+    $i : InputData()
+    $s1 : Span() from $i.spanList
+    $s2 : Span(startDate < $s1.endDate, endDate > $s1.endDate) from $i.spanList
+  then
+    System.out.println("overlapped : $s1 = " + $s1 + " and $s2 = " + $s2);
+end
+
+rule findOverlap2
+  when
+    $i : InputData()
+    $s1 : Span() from $i.spanList
+    $s2 : Span(startDate < $s1.startDate, endDate > $s1.startDate) from $i.spanList
+  then
+    System.out.println("overlapped : $s1 = " + $s1 + " and $s2 = " + $s2);
+end

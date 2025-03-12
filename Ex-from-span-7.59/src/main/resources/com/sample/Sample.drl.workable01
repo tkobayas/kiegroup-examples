@@ -1,0 +1,24 @@
+package com.sample
+
+import com.sample.InputData;
+import com.sample.Span;
+import java.util.List;
+
+
+rule insertSpan
+  when
+    $i : InputData()
+  then
+    for(Span span : $i.getSpanList()) {
+      insert(span);
+    }
+end
+
+rule checkSpan
+  when
+    $s : Span()
+    not (Span(startDate < $s.endDate, endDate > $s.endDate))
+    not (Span(startDate < $s.startDate, endDate > $s.startDate))
+  then
+    System.out.println("not overlapped : $s = " + $s);
+end

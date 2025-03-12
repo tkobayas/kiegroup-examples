@@ -1,0 +1,26 @@
+package com.sample
+ 
+import com.sample.Message;
+import org.drools.core.common.EventFactHandle;
+import org.drools.core.base.DefaultKnowledgeHelper;
+
+import java.util.Date;
+
+
+declare Message
+    @role( event )
+    @expires(1000d)
+end
+
+
+rule "Is there any close message?"
+    when
+        $m1 : Message( )
+        $m2 : Message( this != $m1 && this after[0, 50d] $m1 )
+    then
+        System.out.println( $m1 + " and " + $m2 + " are close");
+        EventFactHandle handle1 = (EventFactHandle)((DefaultKnowledgeHelper)kcontext).getFactHandle($m1);
+        System.out.println("  " + $m1 + " was inserted at " + new Date(handle1.getStartTimestamp()));
+        EventFactHandle handle2 = (EventFactHandle)((DefaultKnowledgeHelper)kcontext).getFactHandle($m2);
+        System.out.println("  " + $m2 + " was inserted at " + new Date(handle2.getStartTimestamp()));
+end
