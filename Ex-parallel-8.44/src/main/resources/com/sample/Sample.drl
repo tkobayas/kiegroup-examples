@@ -1,0 +1,67 @@
+package com.sample;
+
+import com.sample.Person;
+rule "rule0"
+  when
+    $p : Person( age == 0 )
+    $s : String( this == "GO" )
+  then
+    System.out.println( "rule0 fired : " + $p );
+end
+
+rule "rule1"
+  when
+    $p : Person( age == 1 )
+    $s : String( this == "GO" )
+  then
+    System.out.println( "rule1 fired : " + $p );
+end
+
+rule "rule2"
+  when
+    $p : Person( age == 2 )
+    $s : String( this == "GO" )
+  then
+    System.out.println( "rule2 fired : " + $p );
+end
+
+rule "rule3"
+  when
+    $p : Person( age == 3 )
+    $s : String( this == "GO" )
+  then
+    System.out.println( "rule3 fired : " + $p );
+end
+
+rule "rule4"
+  when
+    $p : Person( age == 4 )
+    $s : String( this == "GO" )
+  then
+    System.out.println( "rule4 fired : " + $p );
+end
+
+rule "rule5"
+  when
+    $p : Person( age == 5 )
+    $s : String( this == "GO" )
+  then
+    System.out.println( "rule5 fired : " + $p );
+end
+
+rule "rule6"
+  when
+    $p : Person( age == 6 )
+    $s : String( this == "GO" )
+  then
+    System.out.println( "rule6 fired : " + $p );
+end
+
+rule "rule7"
+  when
+    $p : Person( age == 7 )
+    $s : String( this == "GO" )
+  then
+    System.out.println( "rule7 fired : " + $p );
+end
+

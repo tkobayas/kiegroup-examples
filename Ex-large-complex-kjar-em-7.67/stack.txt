@@ -1,0 +1,494 @@
+2023-01-06 12:48:39
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (11.0.5+10-LTS mixed mode):
+
+Threads class SMR info:
+_java_thread_list=0x00007f3304001f00, length=19, elements={
+0x00007f3364013000, 0x00007f3364262000, 0x00007f3364266000, 0x00007f3364278800,
+0x00007f336427a800, 0x00007f336427c800, 0x00007f336427f000, 0x00007f3364318000,
+0x00007f3364326800, 0x00007f3364691800, 0x00007f33646a8000, 0x00007f329c002000,
+0x00007f329c004000, 0x00007f329c005800, 0x00007f32a0001000, 0x00007f3294001000,
+0x00007f329c007800, 0x00007f32a0003000, 0x00007f3304001000
+}
+
+"main" #1 prio=5 os_prio=0 cpu=11189.06ms elapsed=38.02s tid=0x00007f3364013000 nid=0x6f6b in Object.wait()  [0x00007f336e52a000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@11.0.5/Native Method)
+	- waiting on <0x0000000638100000> (a java.util.concurrent.ForkJoinTask$AdaptedRunnableAction)
+	at java.util.concurrent.ForkJoinTask.externalInterruptibleAwaitDone(java.base@11.0.5/ForkJoinTask.java:356)
+	- waiting to re-lock in wait() <0x0000000638100000> (a java.util.concurrent.ForkJoinTask$AdaptedRunnableAction)
+	at java.util.concurrent.ForkJoinTask.get(java.base@11.0.5/ForkJoinTask.java:1004)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.compileRulesLevel(KnowledgeBuilderImpl.java:1140)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.compileRules(KnowledgeBuilderImpl.java:1103)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.compileKnowledgePackages(KnowledgeBuilderImpl.java:921)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.buildRules(KnowledgeBuilderImpl.java:2489)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.doFirstBuildStep(KnowledgeBuilderImpl.java:2414)
+	at org.drools.compiler.builder.impl.CompositeKnowledgeBuilderImpl.build(CompositeKnowledgeBuilderImpl.java:109)
+	at org.drools.compiler.builder.impl.CompositeKnowledgeBuilderImpl.build(CompositeKnowledgeBuilderImpl.java:99)
+	at org.drools.compiler.kie.builder.impl.AbstractKieProject.buildKnowledgePackages(AbstractKieProject.java:270)
+	at org.drools.compiler.kie.builder.impl.AbstractKieProject.buildKnowledgePackages(AbstractKieProject.java:216)
+	at org.drools.compiler.kie.builder.impl.AbstractKieModule.buildKnowledgePackages(AbstractKieModule.java:193)
+	at org.drools.compiler.kie.builder.impl.AbstractKieModule.createKieBase(AbstractKieModule.java:205)
+	at org.drools.compiler.kie.builder.impl.KieContainerImpl.createKieBase(KieContainerImpl.java:475)
+	at org.drools.compiler.kie.builder.impl.KieContainerImpl.getKieBase(KieContainerImpl.java:439)
+	- locked <0x000000061f37e048> (a org.drools.compiler.kproject.models.KieBaseModelImpl)
+	at org.drools.compiler.kie.builder.impl.KieContainerImpl.getKieBase(KieContainerImpl.java:420)
+	at com.sample.DroolsTest.testKjar(DroolsTest.java:25)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(java.base@11.0.5/Native Method)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(java.base@11.0.5/NativeMethodAccessorImpl.java:62)
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(java.base@11.0.5/DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(java.base@11.0.5/Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+
+"Reference Handler" #2 daemon prio=10 os_prio=0 cpu=6.32ms elapsed=38.00s tid=0x00007f3364262000 nid=0x6f73 waiting on condition  [0x00007f334c228000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@11.0.5/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@11.0.5/Reference.java:241)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@11.0.5/Reference.java:213)
+
+"Finalizer" #3 daemon prio=8 os_prio=0 cpu=0.29ms elapsed=38.00s tid=0x00007f3364266000 nid=0x6f74 in Object.wait()  [0x00007f334c127000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@11.0.5/Native Method)
+	- waiting on <0x0000000610904b80> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(java.base@11.0.5/ReferenceQueue.java:155)
+	- waiting to re-lock in wait() <0x0000000610904b80> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(java.base@11.0.5/ReferenceQueue.java:176)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@11.0.5/Finalizer.java:170)
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=0 cpu=0.30ms elapsed=37.99s tid=0x00007f3364278800 nid=0x6f75 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #5 daemon prio=9 os_prio=0 cpu=14950.41ms elapsed=37.99s tid=0x00007f336427a800 nid=0x6f76 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #8 daemon prio=9 os_prio=0 cpu=2988.92ms elapsed=37.99s tid=0x00007f336427c800 nid=0x6f77 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Sweeper thread" #9 daemon prio=9 os_prio=0 cpu=82.63ms elapsed=37.99s tid=0x00007f336427f000 nid=0x6f78 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #10 daemon prio=9 os_prio=0 cpu=0.07ms elapsed=37.96s tid=0x00007f3364318000 nid=0x6f79 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #11 daemon prio=8 os_prio=0 cpu=1.07ms elapsed=37.96s tid=0x00007f3364326800 nid=0x6f7b in Object.wait()  [0x00007f333433f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@11.0.5/Native Method)
+	- waiting on <0x00000006109052f8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(java.base@11.0.5/ReferenceQueue.java:155)
+	- waiting to re-lock in wait() <0x00000006109052f8> (a java.lang.ref.ReferenceQueue$Lock)
+	at jdk.internal.ref.CleanerImpl.run(java.base@11.0.5/CleanerImpl.java:148)
+	at java.lang.Thread.run(java.base@11.0.5/Thread.java:834)
+	at jdk.internal.misc.InnocuousThread.run(java.base@11.0.5/InnocuousThread.java:134)
+
+"ReaderThread" #12 prio=5 os_prio=0 cpu=0.32ms elapsed=37.88s tid=0x00007f3364691800 nid=0x6f7d runnable  [0x00007f330ac2d000]
+   java.lang.Thread.State: RUNNABLE
+	at java.net.SocketInputStream.socketRead0(java.base@11.0.5/Native Method)
+	at java.net.SocketInputStream.socketRead(java.base@11.0.5/SocketInputStream.java:115)
+	at java.net.SocketInputStream.read(java.base@11.0.5/SocketInputStream.java:168)
+	at java.net.SocketInputStream.read(java.base@11.0.5/SocketInputStream.java:140)
+	at sun.nio.cs.StreamDecoder.readBytes(java.base@11.0.5/StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(java.base@11.0.5/StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(java.base@11.0.5/StreamDecoder.java:178)
+	- locked <0x0000000610905838> (a java.io.InputStreamReader)
+	at java.io.InputStreamReader.read(java.base@11.0.5/InputStreamReader.java:185)
+	at java.io.BufferedReader.fill(java.base@11.0.5/BufferedReader.java:161)
+	at java.io.BufferedReader.readLine(java.base@11.0.5/BufferedReader.java:326)
+	- locked <0x0000000610905838> (a java.io.InputStreamReader)
+	at java.io.BufferedReader.readLine(java.base@11.0.5/BufferedReader.java:392)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner$ReaderThread.run(RemoteTestRunner.java:152)
+
+"ForkJoinPool-1-worker-3" #14 daemon prio=5 os_prio=0 cpu=12808.33ms elapsed=26.39s tid=0x00007f33646a8000 nid=0x6fa0 in Object.wait()  [0x00007f3309a98000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@11.0.5/Native Method)
+	- waiting on <0x0000000638300390> (a java.util.stream.ForEachOps$ForEachTask)
+	at java.util.concurrent.ForkJoinTask.internalWait(java.base@11.0.5/ForkJoinTask.java:311)
+	- waiting to re-lock in wait() <0x0000000638300390> (a java.util.stream.ForEachOps$ForEachTask)
+	at java.util.concurrent.ForkJoinPool.awaitJoin(java.base@11.0.5/ForkJoinPool.java:1730)
+	at java.util.concurrent.ForkJoinTask.doInvoke(java.base@11.0.5/ForkJoinTask.java:411)
+	at java.util.concurrent.ForkJoinTask.invoke(java.base@11.0.5/ForkJoinTask.java:736)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateParallel(java.base@11.0.5/ForEachOps.java:159)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateParallel(java.base@11.0.5/ForEachOps.java:173)
+	at java.util.stream.AbstractPipeline.evaluate(java.base@11.0.5/AbstractPipeline.java:233)
+	at java.util.stream.ReferencePipeline.forEach(java.base@11.0.5/ReferencePipeline.java:497)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.lambda$compileRulesLevel$4(KnowledgeBuilderImpl.java:1129)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl$$Lambda$140/0x00000008003e5840.run(Unknown Source)
+	at java.util.concurrent.ForkJoinTask$AdaptedRunnableAction.exec(java.base@11.0.5/ForkJoinTask.java:1407)
+	at java.util.concurrent.ForkJoinTask.doExec(java.base@11.0.5/ForkJoinTask.java:290)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(java.base@11.0.5/ForkJoinPool.java:1020)
+	at java.util.concurrent.ForkJoinPool.scan(java.base@11.0.5/ForkJoinPool.java:1656)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@11.0.5/ForkJoinPool.java:1594)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@11.0.5/ForkJoinWorkerThread.java:177)
+
+"ForkJoinPool-1-worker-5" #15 daemon prio=5 os_prio=0 cpu=14880.49ms elapsed=26.39s tid=0x00007f329c002000 nid=0x6fa1 waiting for monitor entry  [0x00007f32abbf9000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at java.lang.Class.forName0(java.base@11.0.5/Native Method)
+	at java.lang.Class.forName(java.base@11.0.5/Class.java:398)
+	at org.mvel2.optimizers.AbstractOptimizer.tryStaticAccess(AbstractOptimizer.java:83)
+	at org.mvel2.compiler.PropertyVerifier.getBeanProperty(PropertyVerifier.java:257)
+	at org.mvel2.compiler.PropertyVerifier.analyze(PropertyVerifier.java:133)
+	at org.mvel2.compiler.ExpressionCompiler.verify(ExpressionCompiler.java:400)
+	at org.mvel2.compiler.ExpressionCompiler._compile(ExpressionCompiler.java:282)
+	at org.mvel2.compiler.ExpressionCompiler.compile(ExpressionCompiler.java:68)
+	at org.mvel2.MVEL.analyze(MVEL.java:697)
+	at org.mvel2.MVEL.analyze(MVEL.java:702)
+	at org.drools.mvel.builder.MVELExprAnalyzer.analyzeExpression(MVELExprAnalyzer.java:130)
+	at org.drools.mvel.builder.MVELDialect.analyzeExpression(MVELDialect.java:502)
+	at org.drools.mvel.builder.MVELDialect.analyzeExpression(MVELDialect.java:484)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildAnalysis(PatternBuilder.java:1522)
+	at org.drools.mvel.MVELConstraintBuilder.buildCompilationUnit(MVELConstraintBuilder.java:379)
+	at org.drools.mvel.MVELConstraintBuilder.buildVariableConstraint(MVELConstraintBuilder.java:190)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildConstraintForPattern(PatternBuilder.java:1170)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildRelationalExpression(PatternBuilder.java:1031)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildExpression(PatternBuilder.java:901)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildCcdDescr(PatternBuilder.java:873)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:690)
+	at org.drools.compiler.rule.builder.PatternBuilder.processConstraintsAndBinds(PatternBuilder.java:594)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:167)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:134)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:116)
+	at org.drools.compiler.rule.builder.GroupElementBuilder.build(GroupElementBuilder.java:66)
+	at org.drools.compiler.rule.builder.RuleBuilder.build(RuleBuilder.java:106)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.internalAddRule(KnowledgeBuilderImpl.java:1182)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.addRule(KnowledgeBuilderImpl.java:1177)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.lambda$compileRulesLevel$3(KnowledgeBuilderImpl.java:1133)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl$$Lambda$142/0x00000008003e5440.accept(Unknown Source)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(java.base@11.0.5/ForEachOps.java:183)
+	at java.util.stream.ReferencePipeline$2$1.accept(java.base@11.0.5/ReferencePipeline.java:177)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(java.base@11.0.5/ArrayList.java:1654)
+	at java.util.stream.AbstractPipeline.copyInto(java.base@11.0.5/AbstractPipeline.java:484)
+	at java.util.stream.ForEachOps$ForEachTask.compute(java.base@11.0.5/ForEachOps.java:290)
+	at java.util.concurrent.CountedCompleter.exec(java.base@11.0.5/CountedCompleter.java:746)
+	at java.util.concurrent.ForkJoinTask.doExec(java.base@11.0.5/ForkJoinTask.java:290)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(java.base@11.0.5/ForkJoinPool.java:1020)
+	at java.util.concurrent.ForkJoinPool.scan(java.base@11.0.5/ForkJoinPool.java:1656)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@11.0.5/ForkJoinPool.java:1594)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@11.0.5/ForkJoinWorkerThread.java:177)
+
+"ForkJoinPool-1-worker-7" #16 daemon prio=5 os_prio=0 cpu=14813.34ms elapsed=26.39s tid=0x00007f329c004000 nid=0x6fa2 waiting for monitor entry  [0x00007f32abaf8000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at java.lang.Class.forName0(java.base@11.0.5/Native Method)
+	at java.lang.Class.forName(java.base@11.0.5/Class.java:398)
+	at org.mvel2.optimizers.AbstractOptimizer.tryStaticAccess(AbstractOptimizer.java:83)
+	at org.mvel2.compiler.PropertyVerifier.getBeanProperty(PropertyVerifier.java:257)
+	at org.mvel2.compiler.PropertyVerifier.analyze(PropertyVerifier.java:133)
+	at org.mvel2.compiler.ExpressionCompiler.verify(ExpressionCompiler.java:400)
+	at org.mvel2.compiler.ExpressionCompiler._compile(ExpressionCompiler.java:282)
+	at org.mvel2.compiler.ExpressionCompiler.compile(ExpressionCompiler.java:68)
+	at org.mvel2.MVEL.analysisCompile(MVEL.java:687)
+	at org.mvel2.MVEL.analysisCompile(MVEL.java:691)
+	at org.drools.mvel.MVELConstraintBuilder.setExprInputs(MVELConstraintBuilder.java:753)
+	at org.drools.compiler.rule.builder.PatternBuilder.getExprBindings(PatternBuilder.java:1037)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildRelationalExpression(PatternBuilder.java:1023)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildExpression(PatternBuilder.java:901)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildCcdDescr(PatternBuilder.java:873)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:690)
+	at org.drools.compiler.rule.builder.PatternBuilder.processConstraintsAndBinds(PatternBuilder.java:594)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:167)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:134)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:116)
+	at org.drools.compiler.rule.builder.GroupElementBuilder.build(GroupElementBuilder.java:66)
+	at org.drools.compiler.rule.builder.RuleBuilder.build(RuleBuilder.java:106)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.internalAddRule(KnowledgeBuilderImpl.java:1182)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.addRule(KnowledgeBuilderImpl.java:1177)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.lambda$compileRulesLevel$3(KnowledgeBuilderImpl.java:1133)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl$$Lambda$142/0x00000008003e5440.accept(Unknown Source)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(java.base@11.0.5/ForEachOps.java:183)
+	at java.util.stream.ReferencePipeline$2$1.accept(java.base@11.0.5/ReferencePipeline.java:177)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(java.base@11.0.5/ArrayList.java:1654)
+	at java.util.stream.AbstractPipeline.copyInto(java.base@11.0.5/AbstractPipeline.java:484)
+	at java.util.stream.ForEachOps$ForEachTask.compute(java.base@11.0.5/ForEachOps.java:290)
+	at java.util.concurrent.CountedCompleter.exec(java.base@11.0.5/CountedCompleter.java:746)
+	at java.util.concurrent.ForkJoinTask.doExec(java.base@11.0.5/ForkJoinTask.java:290)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(java.base@11.0.5/ForkJoinPool.java:1020)
+	at java.util.concurrent.ForkJoinPool.scan(java.base@11.0.5/ForkJoinPool.java:1656)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@11.0.5/ForkJoinPool.java:1594)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@11.0.5/ForkJoinWorkerThread.java:177)
+
+"ForkJoinPool-1-worker-11" #18 daemon prio=5 os_prio=0 cpu=14944.11ms elapsed=26.39s tid=0x00007f329c005800 nid=0x6fa3 waiting for monitor entry  [0x00007f32ab9f7000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at java.lang.Class.forName0(java.base@11.0.5/Native Method)
+	at java.lang.Class.forName(java.base@11.0.5/Class.java:398)
+	at org.mvel2.optimizers.AbstractOptimizer.tryStaticAccess(AbstractOptimizer.java:83)
+	at org.mvel2.compiler.PropertyVerifier.getBeanProperty(PropertyVerifier.java:257)
+	at org.mvel2.compiler.PropertyVerifier.analyze(PropertyVerifier.java:133)
+	at org.mvel2.compiler.ExpressionCompiler.verify(ExpressionCompiler.java:400)
+	at org.mvel2.compiler.ExpressionCompiler._compile(ExpressionCompiler.java:282)
+	at org.mvel2.compiler.ExpressionCompiler.compile(ExpressionCompiler.java:68)
+	at org.mvel2.MVEL.analyze(MVEL.java:697)
+	at org.mvel2.MVEL.analyze(MVEL.java:702)
+	at org.drools.mvel.builder.MVELExprAnalyzer.analyzeExpression(MVELExprAnalyzer.java:130)
+	at org.drools.mvel.builder.MVELDialect.analyzeExpression(MVELDialect.java:502)
+	at org.drools.mvel.builder.MVELDialect.analyzeExpression(MVELDialect.java:484)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildAnalysis(PatternBuilder.java:1522)
+	at org.drools.mvel.MVELConstraintBuilder.buildCompilationUnit(MVELConstraintBuilder.java:379)
+	at org.drools.mvel.MVELConstraintBuilder.buildVariableConstraint(MVELConstraintBuilder.java:190)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildConstraintForPattern(PatternBuilder.java:1170)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildRelationalExpression(PatternBuilder.java:1031)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildExpression(PatternBuilder.java:901)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildCcdDescr(PatternBuilder.java:873)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:690)
+	at org.drools.compiler.rule.builder.PatternBuilder.processConstraintsAndBinds(PatternBuilder.java:594)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:167)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:134)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:116)
+	at org.drools.compiler.rule.builder.GroupElementBuilder.build(GroupElementBuilder.java:66)
+	at org.drools.compiler.rule.builder.RuleBuilder.build(RuleBuilder.java:106)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.internalAddRule(KnowledgeBuilderImpl.java:1182)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.addRule(KnowledgeBuilderImpl.java:1177)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.lambda$compileRulesLevel$3(KnowledgeBuilderImpl.java:1133)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl$$Lambda$142/0x00000008003e5440.accept(Unknown Source)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(java.base@11.0.5/ForEachOps.java:183)
+	at java.util.stream.ReferencePipeline$2$1.accept(java.base@11.0.5/ReferencePipeline.java:177)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(java.base@11.0.5/ArrayList.java:1654)
+	at java.util.stream.AbstractPipeline.copyInto(java.base@11.0.5/AbstractPipeline.java:484)
+	at java.util.stream.ForEachOps$ForEachTask.compute(java.base@11.0.5/ForEachOps.java:290)
+	at java.util.concurrent.CountedCompleter.exec(java.base@11.0.5/CountedCompleter.java:746)
+	at java.util.concurrent.ForkJoinTask.doExec(java.base@11.0.5/ForkJoinTask.java:290)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(java.base@11.0.5/ForkJoinPool.java:1020)
+	at java.util.concurrent.ForkJoinPool.scan(java.base@11.0.5/ForkJoinPool.java:1656)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@11.0.5/ForkJoinPool.java:1594)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@11.0.5/ForkJoinWorkerThread.java:177)
+
+"ForkJoinPool-1-worker-9" #17 daemon prio=5 os_prio=0 cpu=14950.30ms elapsed=26.39s tid=0x00007f32a0001000 nid=0x6fa4 waiting for monitor entry  [0x00007f32ab8f6000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at java.lang.Class.forName0(java.base@11.0.5/Native Method)
+	at java.lang.Class.forName(java.base@11.0.5/Class.java:398)
+	at org.mvel2.optimizers.AbstractOptimizer.tryStaticAccess(AbstractOptimizer.java:83)
+	at org.mvel2.compiler.PropertyVerifier.getBeanProperty(PropertyVerifier.java:257)
+	at org.mvel2.compiler.PropertyVerifier.analyze(PropertyVerifier.java:133)
+	at org.mvel2.compiler.ExpressionCompiler.verify(ExpressionCompiler.java:400)
+	at org.mvel2.compiler.ExpressionCompiler._compile(ExpressionCompiler.java:282)
+	at org.mvel2.compiler.ExpressionCompiler.compile(ExpressionCompiler.java:68)
+	at org.mvel2.MVEL.analysisCompile(MVEL.java:687)
+	at org.mvel2.MVEL.analysisCompile(MVEL.java:691)
+	at org.drools.mvel.MVELConstraintBuilder.setExprInputs(MVELConstraintBuilder.java:753)
+	at org.drools.compiler.rule.builder.PatternBuilder.getExprBindings(PatternBuilder.java:1037)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildRelationalExpression(PatternBuilder.java:1023)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildExpression(PatternBuilder.java:901)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildCcdDescr(PatternBuilder.java:873)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:690)
+	at org.drools.compiler.rule.builder.PatternBuilder.processConstraintsAndBinds(PatternBuilder.java:594)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:167)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:134)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:116)
+	at org.drools.compiler.rule.builder.GroupElementBuilder.build(GroupElementBuilder.java:66)
+	at org.drools.compiler.rule.builder.RuleBuilder.build(RuleBuilder.java:106)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.internalAddRule(KnowledgeBuilderImpl.java:1182)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.addRule(KnowledgeBuilderImpl.java:1177)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.lambda$compileRulesLevel$3(KnowledgeBuilderImpl.java:1133)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl$$Lambda$142/0x00000008003e5440.accept(Unknown Source)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(java.base@11.0.5/ForEachOps.java:183)
+	at java.util.stream.ReferencePipeline$2$1.accept(java.base@11.0.5/ReferencePipeline.java:177)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(java.base@11.0.5/ArrayList.java:1654)
+	at java.util.stream.AbstractPipeline.copyInto(java.base@11.0.5/AbstractPipeline.java:484)
+	at java.util.stream.ForEachOps$ForEachTask.compute(java.base@11.0.5/ForEachOps.java:290)
+	at java.util.concurrent.CountedCompleter.exec(java.base@11.0.5/CountedCompleter.java:746)
+	at java.util.concurrent.ForkJoinTask.doExec(java.base@11.0.5/ForkJoinTask.java:290)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(java.base@11.0.5/ForkJoinPool.java:1020)
+	at java.util.concurrent.ForkJoinPool.scan(java.base@11.0.5/ForkJoinPool.java:1656)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@11.0.5/ForkJoinPool.java:1594)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@11.0.5/ForkJoinWorkerThread.java:177)
+
+"ForkJoinPool-1-worker-15" #20 daemon prio=5 os_prio=0 cpu=14724.43ms elapsed=26.39s tid=0x00007f3294001000 nid=0x6fa5 runnable  [0x00007f32ab7f5000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.Throwable.fillInStackTrace(java.base@11.0.5/Native Method)
+	at java.lang.Throwable.fillInStackTrace(java.base@11.0.5/Throwable.java:787)
+	- locked <0x00000006870baf28> (a java.lang.ClassNotFoundException)
+	at java.lang.Throwable.<init>(java.base@11.0.5/Throwable.java:292)
+	at java.lang.Exception.<init>(java.base@11.0.5/Exception.java:84)
+	at java.lang.ReflectiveOperationException.<init>(java.base@11.0.5/ReflectiveOperationException.java:75)
+	at java.lang.ClassNotFoundException.<init>(java.base@11.0.5/ClassNotFoundException.java:82)
+	at org.drools.reflective.classloader.ProjectClassLoader.tryDefineType(ProjectClassLoader.java:205)
+	at org.drools.reflective.classloader.ProjectClassLoader.loadType(ProjectClassLoader.java:195)
+	at org.drools.reflective.classloader.ProjectClassLoader.loadClass(ProjectClassLoader.java:149)
+	at java.lang.ClassLoader.loadClass(java.base@11.0.5/ClassLoader.java:521)
+	at java.lang.Class.forName0(java.base@11.0.5/Native Method)
+	at java.lang.Class.forName(java.base@11.0.5/Class.java:398)
+	at org.mvel2.util.ParseTools.createClass(ParseTools.java:558)
+	at org.mvel2.util.ParseTools.findClass(ParseTools.java:981)
+	at org.mvel2.compiler.PropertyVerifier.getBeanProperty(PropertyVerifier.java:287)
+	at org.mvel2.compiler.PropertyVerifier.analyze(PropertyVerifier.java:133)
+	at org.mvel2.compiler.ExpressionCompiler.verify(ExpressionCompiler.java:400)
+	at org.mvel2.compiler.ExpressionCompiler._compile(ExpressionCompiler.java:282)
+	at org.mvel2.compiler.ExpressionCompiler.compile(ExpressionCompiler.java:68)
+	at org.mvel2.MVEL.analysisCompile(MVEL.java:687)
+	at org.mvel2.MVEL.analysisCompile(MVEL.java:691)
+	at org.drools.mvel.MVELConstraintBuilder.setExprInputs(MVELConstraintBuilder.java:753)
+	at org.drools.compiler.rule.builder.PatternBuilder.getExprBindings(PatternBuilder.java:1037)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildRelationalExpression(PatternBuilder.java:1023)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildExpression(PatternBuilder.java:901)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildCcdDescr(PatternBuilder.java:873)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:690)
+	at org.drools.compiler.rule.builder.PatternBuilder.processConstraintsAndBinds(PatternBuilder.java:594)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:167)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:134)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:116)
+	at org.drools.compiler.rule.builder.GroupElementBuilder.build(GroupElementBuilder.java:66)
+	at org.drools.compiler.rule.builder.RuleBuilder.build(RuleBuilder.java:106)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.internalAddRule(KnowledgeBuilderImpl.java:1182)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.addRule(KnowledgeBuilderImpl.java:1177)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.lambda$compileRulesLevel$3(KnowledgeBuilderImpl.java:1133)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl$$Lambda$142/0x00000008003e5440.accept(Unknown Source)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(java.base@11.0.5/ForEachOps.java:183)
+	at java.util.stream.ReferencePipeline$2$1.accept(java.base@11.0.5/ReferencePipeline.java:177)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(java.base@11.0.5/ArrayList.java:1654)
+	at java.util.stream.AbstractPipeline.copyInto(java.base@11.0.5/AbstractPipeline.java:484)
+	at java.util.stream.ForEachOps$ForEachTask.compute(java.base@11.0.5/ForEachOps.java:290)
+	at java.util.concurrent.CountedCompleter.exec(java.base@11.0.5/CountedCompleter.java:746)
+	at java.util.concurrent.ForkJoinTask.doExec(java.base@11.0.5/ForkJoinTask.java:290)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(java.base@11.0.5/ForkJoinPool.java:1020)
+	at java.util.concurrent.ForkJoinPool.scan(java.base@11.0.5/ForkJoinPool.java:1656)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@11.0.5/ForkJoinPool.java:1594)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@11.0.5/ForkJoinWorkerThread.java:177)
+
+"ForkJoinPool-1-worker-13" #19 daemon prio=5 os_prio=0 cpu=15047.82ms elapsed=26.39s tid=0x00007f329c007800 nid=0x6fa6 waiting for monitor entry  [0x00007f32ab6f4000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at java.lang.Class.forName0(java.base@11.0.5/Native Method)
+	at java.lang.Class.forName(java.base@11.0.5/Class.java:398)
+	at org.mvel2.util.ParseTools.createClass(ParseTools.java:558)
+	at org.mvel2.util.ParseTools.findClass(ParseTools.java:981)
+	at org.mvel2.compiler.PropertyVerifier.getBeanProperty(PropertyVerifier.java:287)
+	at org.mvel2.compiler.PropertyVerifier.analyze(PropertyVerifier.java:133)
+	at org.mvel2.compiler.ExpressionCompiler.verify(ExpressionCompiler.java:400)
+	at org.mvel2.compiler.ExpressionCompiler._compile(ExpressionCompiler.java:282)
+	at org.mvel2.compiler.ExpressionCompiler.compile(ExpressionCompiler.java:68)
+	at org.mvel2.MVEL.analysisCompile(MVEL.java:687)
+	at org.mvel2.MVEL.analysisCompile(MVEL.java:691)
+	at org.drools.mvel.MVELConstraintBuilder.setExprInputs(MVELConstraintBuilder.java:753)
+	at org.drools.compiler.rule.builder.PatternBuilder.getExprBindings(PatternBuilder.java:1037)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildRelationalExpression(PatternBuilder.java:1023)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildExpression(PatternBuilder.java:901)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildCcdDescr(PatternBuilder.java:873)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:690)
+	at org.drools.compiler.rule.builder.PatternBuilder.processConstraintsAndBinds(PatternBuilder.java:594)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:167)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:134)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:116)
+	at org.drools.compiler.rule.builder.GroupElementBuilder.build(GroupElementBuilder.java:66)
+	at org.drools.compiler.rule.builder.RuleBuilder.build(RuleBuilder.java:106)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.internalAddRule(KnowledgeBuilderImpl.java:1182)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.addRule(KnowledgeBuilderImpl.java:1177)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.lambda$compileRulesLevel$3(KnowledgeBuilderImpl.java:1133)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl$$Lambda$142/0x00000008003e5440.accept(Unknown Source)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(java.base@11.0.5/ForEachOps.java:183)
+	at java.util.stream.ReferencePipeline$2$1.accept(java.base@11.0.5/ReferencePipeline.java:177)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(java.base@11.0.5/ArrayList.java:1654)
+	at java.util.stream.AbstractPipeline.copyInto(java.base@11.0.5/AbstractPipeline.java:484)
+	at java.util.stream.ForEachOps$ForEachTask.compute(java.base@11.0.5/ForEachOps.java:290)
+	at java.util.concurrent.CountedCompleter.exec(java.base@11.0.5/CountedCompleter.java:746)
+	at java.util.concurrent.ForkJoinTask.doExec(java.base@11.0.5/ForkJoinTask.java:290)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(java.base@11.0.5/ForkJoinPool.java:1020)
+	at java.util.concurrent.ForkJoinPool.scan(java.base@11.0.5/ForkJoinPool.java:1656)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@11.0.5/ForkJoinPool.java:1594)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@11.0.5/ForkJoinWorkerThread.java:177)
+
+"ForkJoinPool-1-worker-1" #21 daemon prio=5 os_prio=0 cpu=14820.16ms elapsed=26.39s tid=0x00007f32a0003000 nid=0x6fa7 waiting for monitor entry  [0x00007f32ab5f3000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at java.lang.Class.forName0(java.base@11.0.5/Native Method)
+	at java.lang.Class.forName(java.base@11.0.5/Class.java:398)
+	at org.mvel2.optimizers.AbstractOptimizer.tryStaticAccess(AbstractOptimizer.java:83)
+	at org.mvel2.compiler.PropertyVerifier.getBeanProperty(PropertyVerifier.java:257)
+	at org.mvel2.compiler.PropertyVerifier.analyze(PropertyVerifier.java:133)
+	at org.mvel2.compiler.ExpressionCompiler.verify(ExpressionCompiler.java:400)
+	at org.mvel2.compiler.ExpressionCompiler._compile(ExpressionCompiler.java:282)
+	at org.mvel2.compiler.ExpressionCompiler.compile(ExpressionCompiler.java:68)
+	at org.mvel2.MVEL.analysisCompile(MVEL.java:687)
+	at org.mvel2.MVEL.analysisCompile(MVEL.java:691)
+	at org.drools.mvel.MVELConstraintBuilder.setExprInputs(MVELConstraintBuilder.java:753)
+	at org.drools.compiler.rule.builder.PatternBuilder.getExprBindings(PatternBuilder.java:1037)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildRelationalExpression(PatternBuilder.java:1023)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildExpression(PatternBuilder.java:901)
+	at org.drools.compiler.rule.builder.PatternBuilder.buildCcdDescr(PatternBuilder.java:873)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:690)
+	at org.drools.compiler.rule.builder.PatternBuilder.processConstraintsAndBinds(PatternBuilder.java:594)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:167)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:134)
+	at org.drools.compiler.rule.builder.PatternBuilder.build(PatternBuilder.java:116)
+	at org.drools.compiler.rule.builder.GroupElementBuilder.build(GroupElementBuilder.java:66)
+	at org.drools.compiler.rule.builder.RuleBuilder.build(RuleBuilder.java:106)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.internalAddRule(KnowledgeBuilderImpl.java:1182)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.addRule(KnowledgeBuilderImpl.java:1177)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl.lambda$compileRulesLevel$3(KnowledgeBuilderImpl.java:1133)
+	at org.drools.compiler.builder.impl.KnowledgeBuilderImpl$$Lambda$142/0x00000008003e5440.accept(Unknown Source)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(java.base@11.0.5/ForEachOps.java:183)
+	at java.util.stream.ReferencePipeline$2$1.accept(java.base@11.0.5/ReferencePipeline.java:177)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(java.base@11.0.5/ArrayList.java:1654)
+	at java.util.stream.AbstractPipeline.copyInto(java.base@11.0.5/AbstractPipeline.java:484)
+	at java.util.stream.ForEachOps$ForEachTask.compute(java.base@11.0.5/ForEachOps.java:290)
+	at java.util.concurrent.CountedCompleter.exec(java.base@11.0.5/CountedCompleter.java:746)
+	at java.util.concurrent.ForkJoinTask.doExec(java.base@11.0.5/ForkJoinTask.java:290)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(java.base@11.0.5/ForkJoinPool.java:1020)
+	at java.util.concurrent.ForkJoinPool.scan(java.base@11.0.5/ForkJoinPool.java:1656)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@11.0.5/ForkJoinPool.java:1594)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@11.0.5/ForkJoinWorkerThread.java:177)
+
+"Attach Listener" #22 daemon prio=9 os_prio=0 cpu=0.50ms elapsed=0.10s tid=0x00007f3304001000 nid=0x700c waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"VM Thread" os_prio=0 cpu=68.58ms elapsed=38.00s tid=0x00007f336425a000 nid=0x6f72 runnable  
+
+"GC Thread#0" os_prio=0 cpu=1346.51ms elapsed=38.02s tid=0x00007f336403b000 nid=0x6f6c runnable  
+
+"GC Thread#1" os_prio=0 cpu=1444.26ms elapsed=37.61s tid=0x00007f3324001000 nid=0x6f7f runnable  
+
+"GC Thread#2" os_prio=0 cpu=1402.46ms elapsed=37.61s tid=0x00007f3324002800 nid=0x6f80 runnable  
+
+"GC Thread#3" os_prio=0 cpu=1397.24ms elapsed=37.61s tid=0x00007f3324004000 nid=0x6f81 runnable  
+
+"GC Thread#4" os_prio=0 cpu=1390.79ms elapsed=37.61s tid=0x00007f3324005800 nid=0x6f82 runnable  
+
+"GC Thread#5" os_prio=0 cpu=1353.11ms elapsed=37.61s tid=0x00007f3324007000 nid=0x6f83 runnable  
+
+"GC Thread#6" os_prio=0 cpu=1297.50ms elapsed=37.61s tid=0x00007f3324009000 nid=0x6f84 runnable  
+
+"GC Thread#7" os_prio=0 cpu=1410.19ms elapsed=37.61s tid=0x00007f332400b000 nid=0x6f85 runnable  
+
+"G1 Main Marker" os_prio=0 cpu=3.25ms elapsed=38.02s tid=0x00007f3364074800 nid=0x6f6d runnable  
+
+"G1 Conc#0" os_prio=0 cpu=899.76ms elapsed=38.02s tid=0x00007f3364076800 nid=0x6f6e runnable  
+
+"G1 Conc#1" os_prio=0 cpu=887.57ms elapsed=37.09s tid=0x00007f3330001000 nid=0x6f87 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=221.20ms elapsed=38.01s tid=0x00007f33641f5000 nid=0x6f70 runnable  
+
+"G1 Refine#1" os_prio=0 cpu=152.45ms elapsed=34.04s tid=0x00007f332c001000 nid=0x6f93 runnable  
+
+"G1 Refine#2" os_prio=0 cpu=95.72ms elapsed=34.04s tid=0x00007f32c0001000 nid=0x6f94 runnable  
+
+"G1 Refine#3" os_prio=0 cpu=89.50ms elapsed=34.04s tid=0x00007f32b4001000 nid=0x6f95 runnable  
+
+"G1 Refine#4" os_prio=0 cpu=73.06ms elapsed=33.75s tid=0x00007f32b8001000 nid=0x6f96 runnable  
+
+"G1 Refine#5" os_prio=0 cpu=55.47ms elapsed=33.75s tid=0x00007f32ac001000 nid=0x6f97 runnable  
+
+"G1 Refine#6" os_prio=0 cpu=50.78ms elapsed=33.36s tid=0x00007f32b0001000 nid=0x6f98 runnable  
+
+"G1 Refine#7" os_prio=0 cpu=16.96ms elapsed=33.19s tid=0x00007f32e81eb000 nid=0x6f99 runnable  
+
+"G1 Young RemSet Sampling" os_prio=0 cpu=18.38ms elapsed=38.01s tid=0x00007f33641f7000 nid=0x6f71 runnable  
+"VM Periodic Task Thread" os_prio=0 cpu=14.88ms elapsed=37.96s tid=0x00007f336431d000 nid=0x6f7a waiting on condition  
+
+JNI global refs: 18, weak refs: 0
+

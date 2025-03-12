@@ -1,0 +1,21 @@
+package com.sample
+
+import com.sample.DroolsTest.Message;
+
+rule R1
+	ruleflow-group "group1"
+    when
+        m : Message( )
+    then
+        System.out.println( "R1 : m = " + m );
+        m.setCount(m.getCount() + 1);
+        update( m );
+end
+
+rule R2
+	ruleflow-group "group2"
+    when
+        m : Message( count > 0 )
+    then
+        System.out.println( "R2 : m = " + m );
+end

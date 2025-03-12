@@ -1,0 +1,1110 @@
+package com.sample;
+
+import com.sample.FactA;
+import com.sample.FactB;
+import com.sample.FactC;
+import com.sample.FactD;
+import com.sample.FactE;
+
+global java.util.List resultList;
+
+rule "rule0"
+  when
+    $a : FactA( value1 == "0" )
+    $b : FactB( value1 == "0", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "0", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "0", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "0", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule0 fired : " + $a );
+end
+
+rule "rule1"
+  when
+    $a : FactA( value1 == "1" )
+    $b : FactB( value1 == "1", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "1", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "1", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "1", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule1 fired : " + $a );
+end
+
+rule "rule2"
+  when
+    $a : FactA( value1 == "2" )
+    $b : FactB( value1 == "2", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "2", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "2", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "2", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule2 fired : " + $a );
+end
+
+rule "rule3"
+  when
+    $a : FactA( value1 == "3" )
+    $b : FactB( value1 == "3", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "3", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "3", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "3", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule3 fired : " + $a );
+end
+
+rule "rule4"
+  when
+    $a : FactA( value1 == "4" )
+    $b : FactB( value1 == "4", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "4", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "4", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "4", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule4 fired : " + $a );
+end
+
+rule "rule5"
+  when
+    $a : FactA( value1 == "5" )
+    $b : FactB( value1 == "5", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "5", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "5", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "5", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule5 fired : " + $a );
+end
+
+rule "rule6"
+  when
+    $a : FactA( value1 == "6" )
+    $b : FactB( value1 == "6", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "6", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "6", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "6", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule6 fired : " + $a );
+end
+
+rule "rule7"
+  when
+    $a : FactA( value1 == "7" )
+    $b : FactB( value1 == "7", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "7", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "7", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "7", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule7 fired : " + $a );
+end
+
+rule "rule8"
+  when
+    $a : FactA( value1 == "8" )
+    $b : FactB( value1 == "8", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "8", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "8", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "8", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule8 fired : " + $a );
+end
+
+rule "rule9"
+  when
+    $a : FactA( value1 == "9" )
+    $b : FactB( value1 == "9", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "9", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "9", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "9", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule9 fired : " + $a );
+end
+
+rule "rule10"
+  when
+    $a : FactA( value1 == "10" )
+    $b : FactB( value1 == "10", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "10", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "10", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "10", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule10 fired : " + $a );
+end
+
+rule "rule11"
+  when
+    $a : FactA( value1 == "11" )
+    $b : FactB( value1 == "11", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "11", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "11", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "11", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule11 fired : " + $a );
+end
+
+rule "rule12"
+  when
+    $a : FactA( value1 == "12" )
+    $b : FactB( value1 == "12", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "12", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "12", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "12", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule12 fired : " + $a );
+end
+
+rule "rule13"
+  when
+    $a : FactA( value1 == "13" )
+    $b : FactB( value1 == "13", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "13", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "13", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "13", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule13 fired : " + $a );
+end
+
+rule "rule14"
+  when
+    $a : FactA( value1 == "14" )
+    $b : FactB( value1 == "14", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "14", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "14", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "14", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule14 fired : " + $a );
+end
+
+rule "rule15"
+  when
+    $a : FactA( value1 == "15" )
+    $b : FactB( value1 == "15", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "15", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "15", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "15", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule15 fired : " + $a );
+end
+
+rule "rule16"
+  when
+    $a : FactA( value1 == "16" )
+    $b : FactB( value1 == "16", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "16", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "16", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "16", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule16 fired : " + $a );
+end
+
+rule "rule17"
+  when
+    $a : FactA( value1 == "17" )
+    $b : FactB( value1 == "17", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "17", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "17", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "17", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule17 fired : " + $a );
+end
+
+rule "rule18"
+  when
+    $a : FactA( value1 == "18" )
+    $b : FactB( value1 == "18", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "18", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "18", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "18", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule18 fired : " + $a );
+end
+
+rule "rule19"
+  when
+    $a : FactA( value1 == "19" )
+    $b : FactB( value1 == "19", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "19", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "19", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "19", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule19 fired : " + $a );
+end
+
+rule "rule20"
+  when
+    $a : FactA( value1 == "20" )
+    $b : FactB( value1 == "20", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "20", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "20", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "20", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule20 fired : " + $a );
+end
+
+rule "rule21"
+  when
+    $a : FactA( value1 == "21" )
+    $b : FactB( value1 == "21", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "21", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "21", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "21", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule21 fired : " + $a );
+end
+
+rule "rule22"
+  when
+    $a : FactA( value1 == "22" )
+    $b : FactB( value1 == "22", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "22", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "22", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "22", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule22 fired : " + $a );
+end
+
+rule "rule23"
+  when
+    $a : FactA( value1 == "23" )
+    $b : FactB( value1 == "23", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "23", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "23", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "23", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule23 fired : " + $a );
+end
+
+rule "rule24"
+  when
+    $a : FactA( value1 == "24" )
+    $b : FactB( value1 == "24", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "24", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "24", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "24", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule24 fired : " + $a );
+end
+
+rule "rule25"
+  when
+    $a : FactA( value1 == "25" )
+    $b : FactB( value1 == "25", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "25", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "25", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "25", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule25 fired : " + $a );
+end
+
+rule "rule26"
+  when
+    $a : FactA( value1 == "26" )
+    $b : FactB( value1 == "26", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "26", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "26", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "26", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule26 fired : " + $a );
+end
+
+rule "rule27"
+  when
+    $a : FactA( value1 == "27" )
+    $b : FactB( value1 == "27", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "27", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "27", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "27", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule27 fired : " + $a );
+end
+
+rule "rule28"
+  when
+    $a : FactA( value1 == "28" )
+    $b : FactB( value1 == "28", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "28", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "28", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "28", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule28 fired : " + $a );
+end
+
+rule "rule29"
+  when
+    $a : FactA( value1 == "29" )
+    $b : FactB( value1 == "29", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "29", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "29", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "29", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule29 fired : " + $a );
+end
+
+rule "rule30"
+  when
+    $a : FactA( value1 == "30" )
+    $b : FactB( value1 == "30", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "30", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "30", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "30", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule30 fired : " + $a );
+end
+
+rule "rule31"
+  when
+    $a : FactA( value1 == "31" )
+    $b : FactB( value1 == "31", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "31", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "31", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "31", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule31 fired : " + $a );
+end
+
+rule "rule32"
+  when
+    $a : FactA( value1 == "32" )
+    $b : FactB( value1 == "32", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "32", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "32", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "32", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule32 fired : " + $a );
+end
+
+rule "rule33"
+  when
+    $a : FactA( value1 == "33" )
+    $b : FactB( value1 == "33", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "33", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "33", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "33", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule33 fired : " + $a );
+end
+
+rule "rule34"
+  when
+    $a : FactA( value1 == "34" )
+    $b : FactB( value1 == "34", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "34", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "34", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "34", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule34 fired : " + $a );
+end
+
+rule "rule35"
+  when
+    $a : FactA( value1 == "35" )
+    $b : FactB( value1 == "35", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "35", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "35", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "35", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule35 fired : " + $a );
+end
+
+rule "rule36"
+  when
+    $a : FactA( value1 == "36" )
+    $b : FactB( value1 == "36", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "36", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "36", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "36", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule36 fired : " + $a );
+end
+
+rule "rule37"
+  when
+    $a : FactA( value1 == "37" )
+    $b : FactB( value1 == "37", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "37", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "37", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "37", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule37 fired : " + $a );
+end
+
+rule "rule38"
+  when
+    $a : FactA( value1 == "38" )
+    $b : FactB( value1 == "38", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "38", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "38", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "38", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule38 fired : " + $a );
+end
+
+rule "rule39"
+  when
+    $a : FactA( value1 == "39" )
+    $b : FactB( value1 == "39", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "39", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "39", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "39", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule39 fired : " + $a );
+end
+
+rule "rule40"
+  when
+    $a : FactA( value1 == "40" )
+    $b : FactB( value1 == "40", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "40", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "40", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "40", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule40 fired : " + $a );
+end
+
+rule "rule41"
+  when
+    $a : FactA( value1 == "41" )
+    $b : FactB( value1 == "41", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "41", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "41", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "41", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule41 fired : " + $a );
+end
+
+rule "rule42"
+  when
+    $a : FactA( value1 == "42" )
+    $b : FactB( value1 == "42", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "42", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "42", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "42", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule42 fired : " + $a );
+end
+
+rule "rule43"
+  when
+    $a : FactA( value1 == "43" )
+    $b : FactB( value1 == "43", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "43", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "43", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "43", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule43 fired : " + $a );
+end
+
+rule "rule44"
+  when
+    $a : FactA( value1 == "44" )
+    $b : FactB( value1 == "44", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "44", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "44", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "44", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule44 fired : " + $a );
+end
+
+rule "rule45"
+  when
+    $a : FactA( value1 == "45" )
+    $b : FactB( value1 == "45", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "45", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "45", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "45", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule45 fired : " + $a );
+end
+
+rule "rule46"
+  when
+    $a : FactA( value1 == "46" )
+    $b : FactB( value1 == "46", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "46", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "46", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "46", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule46 fired : " + $a );
+end
+
+rule "rule47"
+  when
+    $a : FactA( value1 == "47" )
+    $b : FactB( value1 == "47", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "47", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "47", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "47", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule47 fired : " + $a );
+end
+
+rule "rule48"
+  when
+    $a : FactA( value1 == "48" )
+    $b : FactB( value1 == "48", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "48", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "48", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "48", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule48 fired : " + $a );
+end
+
+rule "rule49"
+  when
+    $a : FactA( value1 == "49" )
+    $b : FactB( value1 == "49", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "49", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "49", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "49", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule49 fired : " + $a );
+end
+
+rule "rule50"
+  when
+    $a : FactA( value1 == "50" )
+    $b : FactB( value1 == "50", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "50", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "50", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "50", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule50 fired : " + $a );
+end
+
+rule "rule51"
+  when
+    $a : FactA( value1 == "51" )
+    $b : FactB( value1 == "51", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "51", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "51", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "51", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule51 fired : " + $a );
+end
+
+rule "rule52"
+  when
+    $a : FactA( value1 == "52" )
+    $b : FactB( value1 == "52", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "52", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "52", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "52", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule52 fired : " + $a );
+end
+
+rule "rule53"
+  when
+    $a : FactA( value1 == "53" )
+    $b : FactB( value1 == "53", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "53", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "53", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "53", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule53 fired : " + $a );
+end
+
+rule "rule54"
+  when
+    $a : FactA( value1 == "54" )
+    $b : FactB( value1 == "54", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "54", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "54", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "54", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule54 fired : " + $a );
+end
+
+rule "rule55"
+  when
+    $a : FactA( value1 == "55" )
+    $b : FactB( value1 == "55", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "55", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "55", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "55", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule55 fired : " + $a );
+end
+
+rule "rule56"
+  when
+    $a : FactA( value1 == "56" )
+    $b : FactB( value1 == "56", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "56", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "56", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "56", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule56 fired : " + $a );
+end
+
+rule "rule57"
+  when
+    $a : FactA( value1 == "57" )
+    $b : FactB( value1 == "57", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "57", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "57", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "57", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule57 fired : " + $a );
+end
+
+rule "rule58"
+  when
+    $a : FactA( value1 == "58" )
+    $b : FactB( value1 == "58", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "58", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "58", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "58", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule58 fired : " + $a );
+end
+
+rule "rule59"
+  when
+    $a : FactA( value1 == "59" )
+    $b : FactB( value1 == "59", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "59", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "59", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "59", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule59 fired : " + $a );
+end
+
+rule "rule60"
+  when
+    $a : FactA( value1 == "60" )
+    $b : FactB( value1 == "60", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "60", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "60", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "60", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule60 fired : " + $a );
+end
+
+rule "rule61"
+  when
+    $a : FactA( value1 == "61" )
+    $b : FactB( value1 == "61", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "61", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "61", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "61", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule61 fired : " + $a );
+end
+
+rule "rule62"
+  when
+    $a : FactA( value1 == "62" )
+    $b : FactB( value1 == "62", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "62", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "62", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "62", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule62 fired : " + $a );
+end
+
+rule "rule63"
+  when
+    $a : FactA( value1 == "63" )
+    $b : FactB( value1 == "63", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "63", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "63", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "63", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule63 fired : " + $a );
+end
+
+rule "rule64"
+  when
+    $a : FactA( value1 == "64" )
+    $b : FactB( value1 == "64", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "64", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "64", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "64", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule64 fired : " + $a );
+end
+
+rule "rule65"
+  when
+    $a : FactA( value1 == "65" )
+    $b : FactB( value1 == "65", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "65", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "65", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "65", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule65 fired : " + $a );
+end
+
+rule "rule66"
+  when
+    $a : FactA( value1 == "66" )
+    $b : FactB( value1 == "66", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "66", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "66", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "66", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule66 fired : " + $a );
+end
+
+rule "rule67"
+  when
+    $a : FactA( value1 == "67" )
+    $b : FactB( value1 == "67", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "67", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "67", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "67", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule67 fired : " + $a );
+end
+
+rule "rule68"
+  when
+    $a : FactA( value1 == "68" )
+    $b : FactB( value1 == "68", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "68", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "68", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "68", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule68 fired : " + $a );
+end
+
+rule "rule69"
+  when
+    $a : FactA( value1 == "69" )
+    $b : FactB( value1 == "69", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "69", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "69", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "69", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule69 fired : " + $a );
+end
+
+rule "rule70"
+  when
+    $a : FactA( value1 == "70" )
+    $b : FactB( value1 == "70", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "70", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "70", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "70", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule70 fired : " + $a );
+end
+
+rule "rule71"
+  when
+    $a : FactA( value1 == "71" )
+    $b : FactB( value1 == "71", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "71", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "71", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "71", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule71 fired : " + $a );
+end
+
+rule "rule72"
+  when
+    $a : FactA( value1 == "72" )
+    $b : FactB( value1 == "72", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "72", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "72", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "72", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule72 fired : " + $a );
+end
+
+rule "rule73"
+  when
+    $a : FactA( value1 == "73" )
+    $b : FactB( value1 == "73", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "73", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "73", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "73", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule73 fired : " + $a );
+end
+
+rule "rule74"
+  when
+    $a : FactA( value1 == "74" )
+    $b : FactB( value1 == "74", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "74", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "74", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "74", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule74 fired : " + $a );
+end
+
+rule "rule75"
+  when
+    $a : FactA( value1 == "75" )
+    $b : FactB( value1 == "75", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "75", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "75", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "75", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule75 fired : " + $a );
+end
+
+rule "rule76"
+  when
+    $a : FactA( value1 == "76" )
+    $b : FactB( value1 == "76", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "76", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "76", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "76", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule76 fired : " + $a );
+end
+
+rule "rule77"
+  when
+    $a : FactA( value1 == "77" )
+    $b : FactB( value1 == "77", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "77", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "77", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "77", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule77 fired : " + $a );
+end
+
+rule "rule78"
+  when
+    $a : FactA( value1 == "78" )
+    $b : FactB( value1 == "78", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "78", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "78", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "78", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule78 fired : " + $a );
+end
+
+rule "rule79"
+  when
+    $a : FactA( value1 == "79" )
+    $b : FactB( value1 == "79", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "79", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "79", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "79", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule79 fired : " + $a );
+end
+
+rule "rule80"
+  when
+    $a : FactA( value1 == "80" )
+    $b : FactB( value1 == "80", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "80", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "80", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "80", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule80 fired : " + $a );
+end
+
+rule "rule81"
+  when
+    $a : FactA( value1 == "81" )
+    $b : FactB( value1 == "81", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "81", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "81", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "81", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule81 fired : " + $a );
+end
+
+rule "rule82"
+  when
+    $a : FactA( value1 == "82" )
+    $b : FactB( value1 == "82", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "82", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "82", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "82", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule82 fired : " + $a );
+end
+
+rule "rule83"
+  when
+    $a : FactA( value1 == "83" )
+    $b : FactB( value1 == "83", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "83", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "83", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "83", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule83 fired : " + $a );
+end
+
+rule "rule84"
+  when
+    $a : FactA( value1 == "84" )
+    $b : FactB( value1 == "84", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "84", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "84", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "84", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule84 fired : " + $a );
+end
+
+rule "rule85"
+  when
+    $a : FactA( value1 == "85" )
+    $b : FactB( value1 == "85", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "85", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "85", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "85", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule85 fired : " + $a );
+end
+
+rule "rule86"
+  when
+    $a : FactA( value1 == "86" )
+    $b : FactB( value1 == "86", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "86", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "86", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "86", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule86 fired : " + $a );
+end
+
+rule "rule87"
+  when
+    $a : FactA( value1 == "87" )
+    $b : FactB( value1 == "87", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "87", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "87", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "87", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule87 fired : " + $a );
+end
+
+rule "rule88"
+  when
+    $a : FactA( value1 == "88" )
+    $b : FactB( value1 == "88", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "88", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "88", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "88", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule88 fired : " + $a );
+end
+
+rule "rule89"
+  when
+    $a : FactA( value1 == "89" )
+    $b : FactB( value1 == "89", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "89", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "89", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "89", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule89 fired : " + $a );
+end
+
+rule "rule90"
+  when
+    $a : FactA( value1 == "90" )
+    $b : FactB( value1 == "90", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "90", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "90", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "90", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule90 fired : " + $a );
+end
+
+rule "rule91"
+  when
+    $a : FactA( value1 == "91" )
+    $b : FactB( value1 == "91", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "91", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "91", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "91", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule91 fired : " + $a );
+end
+
+rule "rule92"
+  when
+    $a : FactA( value1 == "92" )
+    $b : FactB( value1 == "92", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "92", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "92", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "92", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule92 fired : " + $a );
+end
+
+rule "rule93"
+  when
+    $a : FactA( value1 == "93" )
+    $b : FactB( value1 == "93", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "93", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "93", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "93", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule93 fired : " + $a );
+end
+
+rule "rule94"
+  when
+    $a : FactA( value1 == "94" )
+    $b : FactB( value1 == "94", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "94", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "94", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "94", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule94 fired : " + $a );
+end
+
+rule "rule95"
+  when
+    $a : FactA( value1 == "95" )
+    $b : FactB( value1 == "95", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "95", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "95", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "95", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule95 fired : " + $a );
+end
+
+rule "rule96"
+  when
+    $a : FactA( value1 == "96" )
+    $b : FactB( value1 == "96", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "96", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "96", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "96", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule96 fired : " + $a );
+end
+
+rule "rule97"
+  when
+    $a : FactA( value1 == "97" )
+    $b : FactB( value1 == "97", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "97", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "97", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "97", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule97 fired : " + $a );
+end
+
+rule "rule98"
+  when
+    $a : FactA( value1 == "98" )
+    $b : FactB( value1 == "98", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "98", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "98", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "98", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule98 fired : " + $a );
+end
+
+rule "rule99"
+  when
+    $a : FactA( value1 == "99" )
+    $b : FactB( value1 == "99", value2 == $a.value2, value3 == $a.value3, value4 == $a.value4, value5 == $a.value5 )
+    $c : FactC( value1 == "99", value2 == $b.value2, value3 == $b.value3, value4 == $b.value4, value5 == $b.value5 )
+    $d : FactD( value1 == "99", value2 == $c.value2, value3 == $c.value3, value4 == $c.value4, value5 == $c.value5 )
+    $e : FactE( value1 == "99", value2 == $d.value2, value3 == $d.value3, value4 == $d.value4, value5 == $d.value5 )
+  then
+    resultList.add( "rule99 fired : " + $a );
+end
+

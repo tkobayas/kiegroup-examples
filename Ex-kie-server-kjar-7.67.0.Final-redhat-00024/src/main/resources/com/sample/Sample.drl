@@ -1,0 +1,23 @@
+package com.sample
+ 
+import com.sample.Person;
+
+import java.util.ArrayList;
+
+global java.util.List results;
+
+rule "init"
+    when
+    then
+        System.out.println( "init");
+end
+
+
+rule "Hello"
+    when
+        $p : Person( age > 10 )
+    then
+        System.out.println( "Hello, " + $p.getName());
+        results.add("hit Hello rule");
+end
+

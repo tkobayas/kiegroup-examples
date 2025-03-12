@@ -1,0 +1,24 @@
+package com.sample
+
+import com.sample.Person;
+
+rule Hello
+  when
+    $p : Person(age > 20)
+  then
+    System.out.println("Hello, " + $p.getName());
+end
+
+rule Goodbye
+  when
+    $p : Person(age <= 20)
+  then
+    System.out.println("Goodbye, " + $p.getName());
+end
+
+rule HelloGoodbye
+  when
+    $p : Person(age <= 20)
+  then
+    System.out.println("HelloGoodbye, " + $p.getName());
+end
