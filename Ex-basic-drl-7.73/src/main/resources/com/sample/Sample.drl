@@ -1,0 +1,12 @@
+package com.sample
+
+import com.sample.Person;
+
+rule Hello1
+  when
+    String(this == "go")
+    not (Person(age > 20))
+  then
+    System.out.println("Hello1");
+end
+
