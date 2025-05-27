@@ -1,0 +1,11 @@
+package com.sample
+ 
+import com.sample.Person;
+ 
+rule "Find persons whose addresses are a superset of Alice's"
+    when
+        $alice : Person( name == "Alice" )
+        $person : Person( this != $alice, addresses supersetOf $alice.addresses )
+    then
+        System.out.println($person.getName() + "'s addresses are a superset of Alice's addresses.");
+end
