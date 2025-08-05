@@ -1,0 +1,18 @@
+package com.sample
+ 
+import com.sample.MyAnnotation;
+import com.sample.MyOtherAnnotation;
+
+declare Foo
+   @MyOtherAnnotation
+   bar : String @MyAnnotation
+end
+
+rule R1
+    when
+        String(this == "Hello")
+    then
+        Foo foo = new Foo();
+        foo.setBar("World");
+        System.out.println( foo.getBar() );
+end
