@@ -9,7 +9,7 @@
     </encoder>
   </appender>
 
-  <logger name="org.drools.modelcompiler.builder" level="debug"/>
+  <logger name="org.drools.model.codegen" level="debug"/>
 
   <root level="info">
     <appender-ref ref="consoleAppender" />
