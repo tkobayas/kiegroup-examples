@@ -1,0 +1,67 @@
+package com.example.reproducer;
+
+declare ObjectReference
+  id: Integer
+  description: String
+  type1: String
+  type2: String
+end
+
+declare AlphaInputObject
+  ref: ObjectReference
+  value: Integer
+end
+
+declare BetaInputObject
+  ref: ObjectReference
+  type3: String
+  answered: Boolean
+end
+
+declare BetaInferenceObject2
+  ref: ObjectReference
+end
+
+// rule "test" evaluates twice with this reproducer, once before rule "3" ($count == 0) and once after ($count == 1).
+// however when these facts are inserted from java via EntryPoint.Insert() only the first activation occurs, there is no update after the insert from rule "3".
+
+// Removed rule "1" to insert objects from java
+
+rule "test"
+  when
+    AlphaInputObject(
+      $ref: ref,
+      value in ( 1, 2 )
+    )
+    BetaInputObject(
+      ref.id == $ref.id,
+      ref.description == $ref.description,
+      ref.type1 == "type1",
+      ref.type2 == "type2",
+      type3 == "type3",
+      answered == true
+    )
+    or not BetaInputObject(
+      ref.id == $ref.id,
+      ref.description == $ref.description,
+      ref.type1 == "type1",
+      type3 == "type3",
+      answered == true
+    )
+    accumulate(
+      BetaInferenceObject2(
+        ref.id == $ref.id,
+        ref.description == $ref.description
+      );
+      $count: count()
+    )
+  then
+    System.err.println( Long.toString( $count ) );
+end
+
+rule "3"
+  when
+    AlphaInputObject( $ref: ref, ref.id == 1, ref.description == "Input Object 1" );
+  then
+    insertLogical( new BetaInferenceObject2( $ref ) );
+end
