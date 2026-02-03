@@ -32,6 +32,7 @@
     <dependencies>
         <dependency>
             <groupId>io.quarkus</groupId>
+            <!-- use quarkus-rest-jackson for auto-generated REST endpoint -->
             <artifactId>quarkus-rest</artifactId>
         </dependency>
         <dependency>

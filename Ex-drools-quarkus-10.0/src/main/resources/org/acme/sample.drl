@@ -8,3 +8,8 @@ when
 then
     results.add("Hello " + $s);
 end
+
+// If you add a query, a REST endpoint is generated automatically
+//query "All Strings"
+//	$s: /strings;
+//end
